@@ -1,0 +1,4 @@
+D:\Docs\вуз\Программирование\kursov2\kp2\Debug\kp2.vcxproj.AssemblyReference.cache
+D:\Docs\вуз\Программирование\kursov2\kp2\Debug\kp2.main_form.resources
+D:\Docs\вуз\Программирование\kursov2\kp2\Debug\kp2.vcxproj.GenerateResource.cache
+D:\Docs\вуз\Программирование\kursov2\kp2\Debug\kp2.exe
