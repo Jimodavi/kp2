@@ -17,8 +17,7 @@ namespace kp2 {
 		{
 			InitializeComponent();
 		}
-		array<String^>^ column_name = gcnew array<String^> (19);//названия колонок таблицы "Турниры"
-		
+		array<String^>^ column_name = gcnew array<String^>(19);//названия колонок таблицы "Турниры"		
 	protected:
 		/// Освободить все используемые ресурсы.
 		~tournaments_form()
@@ -28,15 +27,14 @@ namespace kp2 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
-	private: System::Windows::Forms::Button^ Download_Button;
-	private: System::Windows::Forms::Button^ Add_Button;
+	private: System::Windows::Forms::Button^ Delete_Button;
+	private: System::Data::DataSet^ dataSet1;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Code_Tournament;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Name;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Code_Category;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Code_System;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Number_Participants;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Type;
+	private: System::Windows::Forms::DataGridViewComboBoxColumn^ Type;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Number_Groups;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Date_Begin;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Date_End;
@@ -50,6 +48,9 @@ namespace kp2 {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ FIO_Director;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Phone_Number_Director;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Number_Seeded_Players;
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::Button^ Download_Button;
+	private: System::Windows::Forms::Button^ Add_Button;
 	private: System::Windows::Forms::Button^ Update_Button;
 	private:
 		/// Обязательная переменная конструктора.
@@ -59,12 +60,17 @@ namespace kp2 {
 		void InitializeComponent(void)
 		{
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->Download_Button = (gcnew System::Windows::Forms::Button());
+			this->Add_Button = (gcnew System::Windows::Forms::Button());
+			this->Update_Button = (gcnew System::Windows::Forms::Button());
+			this->Delete_Button = (gcnew System::Windows::Forms::Button());
+			this->dataSet1 = (gcnew System::Data::DataSet());
 			this->Code_Tournament = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Name = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Code_Category = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Code_System = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Number_Participants = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Type = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Type = (gcnew System::Windows::Forms::DataGridViewComboBoxColumn());
 			this->Number_Groups = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Date_Begin = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Date_End = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -78,10 +84,8 @@ namespace kp2 {
 			this->FIO_Director = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Phone_Number_Director = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Number_Seeded_Players = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Download_Button = (gcnew System::Windows::Forms::Button());
-			this->Add_Button = (gcnew System::Windows::Forms::Button());
-			this->Update_Button = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataSet1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// dataGridView1
@@ -93,10 +97,54 @@ namespace kp2 {
 					this->Date_End, this->Number_Courts, this->Code_Court1, this->Code_Court2, this->Code_Court3, this->Time_Begin, this->Time_End,
 					this->Match_Length, this->FIO_Director, this->Phone_Number_Director, this->Number_Seeded_Players
 			});
-			this->dataGridView1->Location = System::Drawing::Point(12, 12);
+			this->dataGridView1->Location = System::Drawing::Point(3, 12);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->Size = System::Drawing::Size(675, 258);
 			this->dataGridView1->TabIndex = 0;
+			// 
+			// Download_Button
+			// 
+			this->Download_Button->Location = System::Drawing::Point(12, 276);
+			this->Download_Button->Name = L"Download_Button";
+			this->Download_Button->Size = System::Drawing::Size(170, 46);
+			this->Download_Button->TabIndex = 1;
+			this->Download_Button->Text = L"Загрузить";
+			this->Download_Button->UseVisualStyleBackColor = true;
+			this->Download_Button->Click += gcnew System::EventHandler(this, &tournaments_form::Download_Button_Click);
+			// 
+			// Add_Button
+			// 
+			this->Add_Button->Location = System::Drawing::Point(188, 276);
+			this->Add_Button->Name = L"Add_Button";
+			this->Add_Button->Size = System::Drawing::Size(170, 46);
+			this->Add_Button->TabIndex = 2;
+			this->Add_Button->Text = L"Добавить";
+			this->Add_Button->UseVisualStyleBackColor = true;
+			this->Add_Button->Click += gcnew System::EventHandler(this, &tournaments_form::Add_Button_Click);
+			// 
+			// Update_Button
+			// 
+			this->Update_Button->Location = System::Drawing::Point(364, 276);
+			this->Update_Button->Name = L"Update_Button";
+			this->Update_Button->Size = System::Drawing::Size(170, 46);
+			this->Update_Button->TabIndex = 3;
+			this->Update_Button->Text = L"Обновить";
+			this->Update_Button->UseVisualStyleBackColor = true;
+			this->Update_Button->Click += gcnew System::EventHandler(this, &tournaments_form::Update_Button_Click);
+			// 
+			// Delete_Button
+			// 
+			this->Delete_Button->Location = System::Drawing::Point(540, 276);
+			this->Delete_Button->Name = L"Delete_Button";
+			this->Delete_Button->Size = System::Drawing::Size(170, 46);
+			this->Delete_Button->TabIndex = 4;
+			this->Delete_Button->Text = L"Удалить";
+			this->Delete_Button->UseVisualStyleBackColor = true;
+			this->Delete_Button->Click += gcnew System::EventHandler(this, &tournaments_form::Delete_Button_Click);
+			// 
+			// dataSet1
+			// 
+			this->dataSet1->DataSetName = L"NewDataSet";
 			// 
 			// Code_Tournament
 			// 
@@ -127,7 +175,13 @@ namespace kp2 {
 			// Type
 			// 
 			this->Type->HeaderText = L"Разряд";
+			this->Type->Items->AddRange(gcnew cli::array< System::Object^  >(5) {
+				L"Одиночный женский", L"Парный женский", L"Одиночный мужской",
+					L"Парный мужской", L"Смешанный парный"
+			});
 			this->Type->Name = L"Type";
+			this->Type->Resizable = System::Windows::Forms::DataGridViewTriState::True;
+			this->Type->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::Automatic;
 			// 
 			// Number_Groups
 			// 
@@ -194,41 +248,12 @@ namespace kp2 {
 			this->Number_Seeded_Players->HeaderText = L"Количество сеянных участников";
 			this->Number_Seeded_Players->Name = L"Number_Seeded_Players";
 			// 
-			// Download_Button
-			// 
-			this->Download_Button->Location = System::Drawing::Point(12, 276);
-			this->Download_Button->Name = L"Download_Button";
-			this->Download_Button->Size = System::Drawing::Size(170, 46);
-			this->Download_Button->TabIndex = 1;
-			this->Download_Button->Text = L"Загрузить";
-			this->Download_Button->UseVisualStyleBackColor = true;
-			this->Download_Button->Click += gcnew System::EventHandler(this, &tournaments_form::Download_Button_Click);
-			// 
-			// Add_Button
-			// 
-			this->Add_Button->Location = System::Drawing::Point(188, 276);
-			this->Add_Button->Name = L"Add_Button";
-			this->Add_Button->Size = System::Drawing::Size(170, 46);
-			this->Add_Button->TabIndex = 2;
-			this->Add_Button->Text = L"Добавить";
-			this->Add_Button->UseVisualStyleBackColor = true;
-			this->Add_Button->Click += gcnew System::EventHandler(this, &tournaments_form::Add_Button_Click);
-			// 
-			// Update_Button
-			// 
-			this->Update_Button->Location = System::Drawing::Point(364, 276);
-			this->Update_Button->Name = L"Update_Button";
-			this->Update_Button->Size = System::Drawing::Size(170, 46);
-			this->Update_Button->TabIndex = 3;
-			this->Update_Button->Text = L"Обновить";
-			this->Update_Button->UseVisualStyleBackColor = true;
-			this->Update_Button->Click += gcnew System::EventHandler(this, &tournaments_form::Update_Button_Click);
-			// 
 			// tournaments_form
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(840, 432);
+			this->ClientSize = System::Drawing::Size(1023, 668);
+			this->Controls->Add(this->Delete_Button);
 			this->Controls->Add(this->Update_Button);
 			this->Controls->Add(this->Add_Button);
 			this->Controls->Add(this->Download_Button);
@@ -237,12 +262,15 @@ namespace kp2 {
 			this->Text = L"tournaments_form";
 			this->Load += gcnew System::EventHandler(this, &tournaments_form::tournaments_form_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataSet1))->EndInit();
 			this->ResumeLayout(false);
+
 		}
 #pragma endregion
 	private: System::Void Download_Button_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void Add_Button_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void Update_Button_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void tournaments_form_Load(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void Delete_Button_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

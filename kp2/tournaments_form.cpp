@@ -2,6 +2,29 @@
 
 using namespace System::Data::OleDb;
 
+System::Void kp2::tournaments_form::tournaments_form_Load(System::Object^ sender, System::EventArgs^ e)
+{
+	column_name[0] = "Код турнира";
+	column_name[1] = "Наименование";
+	column_name[2] = "Код категории";
+	column_name[3] = "Код системы проведения";
+	column_name[4] = "Количество участников";
+	column_name[5] = "Разряд";
+	column_name[6] = "Количество групп";
+	column_name[7] = "Дата начала";
+	column_name[8] = "Дата конца";
+	column_name[9] = "Количество кортов";
+	column_name[10] = "Код корта 1";
+	column_name[11] = "Код корта 2";
+	column_name[12] = "Код корта 3";
+	column_name[13] = "Время начала проведения";
+	column_name[14] = "Время конца проведения";
+	column_name[15] = "Длительность матча";
+	column_name[16] = "ФИО директора";
+	column_name[17] = "Телефон директора";
+	column_name[18] = "Количество сеянных участников";
+	return System::Void();
+}
 System::Void kp2::tournaments_form::Download_Button_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	/*подключение к БД*/
@@ -9,14 +32,14 @@ System::Void kp2::tournaments_form::Download_Button_Click(System::Object^ sender
 	OleDbConnection^ dbConnection = gcnew OleDbConnection(connectionString);
 	/*запрос в БД*/
 	dbConnection->Open();
-	String^ query = "SELECT * FROM [Турниры]";
+	String^ query = "SELECT * FROM [Турниры] ORDER BY [Код турнира]";
 	OleDbCommand^ dbCommand = gcnew OleDbCommand(query, dbConnection);
 	OleDbDataReader^ dbReader = dbCommand->ExecuteReader();
 	if (dbReader->HasRows == false) {
 		MessageBox::Show("Ошибка считывания данных", "Ошибка");
 	}
 	else {
-	dataGridView1->RowCount;
+		while(dataGridView1->RowCount - 1) dataGridView1->Rows->RemoveAt(0);
 		while (dbReader->Read())
 			dataGridView1->Rows->Add(dbReader[column_name[0]], dbReader[column_name[1]], dbReader[column_name[2]], dbReader[column_name[3]], dbReader[column_name[4]], dbReader[column_name[5]], dbReader[column_name[6]], dbReader[column_name[7]], dbReader[column_name[8]], dbReader[column_name[9]], dbReader[column_name[10]], dbReader[column_name[11]], dbReader[column_name[12]], dbReader[column_name[13]], dbReader[column_name[14]], dbReader[column_name[15]], dbReader[column_name[16]], dbReader[column_name[17]], dbReader[column_name[18]]);
 	}
@@ -57,7 +80,13 @@ System::Void kp2::tournaments_form::Add_Button_Click(System::Object^ sender, Sys
 		MessageBox::Show("Не все данные введены");
 		return;
 	}
-	dataGridView1->Rows[index]->Cells[0]->Value = index+1;
+	int max = Convert::ToInt32(dataGridView1->Rows[0]->Cells[0]->Value);
+	for (int i = 0; i < dataGridView1->RowCount; i++)
+	{
+		if (dataGridView1->Rows[i]->Cells[0]->Value != nullptr && System::Convert::ToInt32(dataGridView1->Rows[i]->Cells[0]->Value) > max)
+			max = System::Convert::ToInt32(dataGridView1->Rows[i]->Cells[0]->Value);
+	}
+	dataGridView1->Rows[index]->Cells[0]->Value = max+1;
 	String^ newelement = "'";
 	for (int i = 0; i < 19; i++) {
 		if (i) newelement += "', '";
@@ -134,27 +163,34 @@ System::Void kp2::tournaments_form::Update_Button_Click(System::Object^ sender, 
 
 	return System::Void();
 }
-System::Void kp2::tournaments_form::tournaments_form_Load(System::Object^ sender, System::EventArgs^ e)
+System::Void kp2::tournaments_form::Delete_Button_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	column_name[0] = "Код турнира";
-	column_name[1] = "Наименование";
-	column_name[2] = "Код категории";
-	column_name[3] = "Код системы проведения";
-	column_name[4] = "Количество участников";
-	column_name[5] = "Разряд";
-	column_name[6] = "Количество групп";
-	column_name[7] = "Дата начала";
-	column_name[8] = "Дата конца";
-	column_name[9] = "Количество кортов";
-	column_name[10] = "Код корта 1";
-	column_name[11] = "Код корта 2";
-	column_name[12] = "Код корта 3";
-	column_name[13] = "Время начала проведения";
-	column_name[14] = "Время конца проведения";
-	column_name[15] = "Длительность матча";
-	column_name[16] = "ФИО директора";
-	column_name[17] = "Телефон директора";
-	column_name[18] = "Количество сеянных участников";
+	/*проверка*/
+	if (dataGridView1->SelectedRows->Count != 1) {
+		MessageBox::Show("Выберите 1 строку для удаления");
+		return;
+	}
+	int index = dataGridView1->SelectedRows[0]->Index;
+	if (dataGridView1->Rows[index]->Cells[0]->Value == nullptr) {
+		MessageBox::Show("Ошибка выполнения запроса", "Ошибка");
+		return;
+	}
+	/*подключение к БД*/
+	String^ connectionString = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = kp2.accdb";
+	OleDbConnection^ dbConnection = gcnew OleDbConnection(connectionString);
+	/*запрос в БД*/
+	dbConnection->Open();
+	String^ query = "DELETE FROM [Турниры] WHERE [Код турнира] = " + dataGridView1->Rows[index]->Cells[0]->Value;
+	OleDbCommand^ dbCommand = gcnew OleDbCommand(query, dbConnection);
+
+	if (dbCommand->ExecuteNonQuery() != 1) MessageBox::Show("Ошибка выполнения запроса", "Ошибка");
+	else { 
+		dataGridView1->Rows->RemoveAt(index);
+		MessageBox::Show("Данные удалены");
+	}
+
+	/*закрытие соединения*/
+	dbConnection->Close();
 	return System::Void();
 }
 ;

@@ -32,7 +32,7 @@ namespace kp2 {
 	private: System::Windows::Forms::ToolStripMenuItem^ Schedule_MenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ Draws_MenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ List_participants_MenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ spravochniki_ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ Catalogs_MenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ Catalog_category_MenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ Catalog_system_MenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ Catalog_etap_MenuItem;
@@ -54,7 +54,7 @@ namespace kp2 {
 			this->Schedule_MenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->Draws_MenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->List_participants_MenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->spravochniki_ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->Catalogs_MenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->Catalog_category_MenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->Catalog_system_MenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->Catalog_etap_MenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -67,7 +67,7 @@ namespace kp2 {
 			// 
 			this->main_menuStrip->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
 				this->Tournaments_MenuItem,
-					this->Schedule_MenuItem, this->Draws_MenuItem, this->List_participants_MenuItem, this->spravochniki_ToolStripMenuItem
+					this->Schedule_MenuItem, this->Draws_MenuItem, this->List_participants_MenuItem, this->Catalogs_MenuItem
 			});
 			this->main_menuStrip->Location = System::Drawing::Point(0, 0);
 			this->main_menuStrip->Name = L"main_menuStrip";
@@ -103,16 +103,15 @@ namespace kp2 {
 			this->List_participants_MenuItem->Text = L"Участники турнира";
 			this->List_participants_MenuItem->Click += gcnew System::EventHandler(this, &main_form::List_participants_MenuItem_Click);
 			// 
-			// spravochniki_ToolStripMenuItem
+			// Catalogs_MenuItem
 			// 
-			this->spravochniki_ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
+			this->Catalogs_MenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
 				this->Catalog_category_MenuItem,
-					this->Catalog_system_MenuItem, this->Catalog_etap_MenuItem, this->Catalog_court_MenuItem,
-					this->Catalog_players_MenuItem
+					this->Catalog_system_MenuItem, this->Catalog_etap_MenuItem, this->Catalog_court_MenuItem, this->Catalog_players_MenuItem
 			});
-			this->spravochniki_ToolStripMenuItem->Name = L"spravochniki_ToolStripMenuItem";
-			this->spravochniki_ToolStripMenuItem->Size = System::Drawing::Size(94, 20);
-			this->spravochniki_ToolStripMenuItem->Text = L"Справочники";
+			this->Catalogs_MenuItem->Name = L"Catalogs_MenuItem";
+			this->Catalogs_MenuItem->Size = System::Drawing::Size(94, 20);
+			this->Catalogs_MenuItem->Text = L"Справочники";
 			// 
 			// Catalog_category_MenuItem
 			// 
