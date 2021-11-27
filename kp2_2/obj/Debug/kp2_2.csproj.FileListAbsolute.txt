@@ -1,0 +1,11 @@
+D:\Docs\вуз\Программирование\kursov2\kp2_2\bin\Debug\kp2_2.exe.config
+D:\Docs\вуз\Программирование\kursov2\kp2_2\bin\Debug\kp2_2.exe
+D:\Docs\вуз\Программирование\kursov2\kp2_2\bin\Debug\kp2_2.pdb
+D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.csproj.AssemblyReference.cache
+D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.main_form.resources
+D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.Properties.Resources.resources
+D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.csproj.GenerateResource.cache
+D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.csproj.CoreCompileInputs.cache
+D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.exe
+D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.pdb
+D:\Docs\вуз\Программирование\kursov2\kp2_2\bin\Debug\kp2.accdb
