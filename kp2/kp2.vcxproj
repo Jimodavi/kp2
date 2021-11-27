@@ -119,15 +119,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main_form.cpp" />
+    <ClCompile Include="tournaments_form.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main_form.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="tournaments_form.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="main_form.resx">
       <DependentUpon>main_form.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tournaments_form.resx">
+      <DependentUpon>tournaments_form.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

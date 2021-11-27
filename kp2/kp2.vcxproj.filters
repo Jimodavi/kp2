@@ -18,9 +18,15 @@
     <ClCompile Include="main_form.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="tournaments_form.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main_form.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="tournaments_form.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

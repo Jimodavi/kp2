@@ -2,3 +2,4 @@ D:\Docs\вуз\Программирование\kursov2\kp2\Debug\kp2.vcxproj.As
 D:\Docs\вуз\Программирование\kursov2\kp2\Debug\kp2.main_form.resources
 D:\Docs\вуз\Программирование\kursov2\kp2\Debug\kp2.vcxproj.GenerateResource.cache
 D:\Docs\вуз\Программирование\kursov2\kp2\Debug\kp2.exe
+D:\Docs\вуз\Программирование\kursov2\kp2\Debug\kp2.tournaments_form.resources
