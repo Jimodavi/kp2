@@ -19,13 +19,13 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.main_menuStrip = new System.Windows.Forms.MenuStrip();
             this.Schedule_MenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Draws_MenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,51 +36,48 @@
             this.Catalog_etap_MenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Catalog_court_MenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Catalog_players_MenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.courtDS = new System.Windows.Forms.BindingSource(this.components);
-            this.kp2DataSet = new kp2_2.kp2DataSet();
-            this.справочникКортовBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.справочник_кортовTableAdapter = new kp2_2.kp2DataSetTableAdapters.Справочник_кортовTableAdapter();
-            this.справочникКортовBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.справочникКортовBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.Category_bindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.category_DataSet = new kp2_2.Category_DataSet();
-            this.справочникКатерогийBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.справочник_катерогийTableAdapter = new kp2_2.Category_DataSetTableAdapters.Справочник_катерогийTableAdapter();
-            this.кодТурнираDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.наименованиеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.количествоУчастниковDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.разрядDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.количествоГруппDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.датаНачалаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.датаКонцаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.количествоКортовDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.времяНачалаПроведенияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.времяКонцаПроведенияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.длительностьМатчаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.фИОДиректораDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.телефонДиректораDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.количествоСеянныхУчастниковDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.турнирыBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tournaments_Dataset = new kp2_2.Tournaments_Dataset();
-            this.турнирыTableAdapter = new kp2_2.Tournaments_DatasetTableAdapters.ТурнирыTableAdapter();
+            this.Турниры_DataGridView = new System.Windows.Forms.DataGridView();
+            this.Справочник_катерогий_BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.кп2_BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.кп2_DataSet = new kp2_2.кп2_DataSet();
+            this.Справочник_систем_проведения_BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Справочник_кортов_BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.Справочник_кортов_BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.Справочник_кортов_BindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.Турниры_BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Турниры_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.ТурнирыTableAdapter();
+            this.Справочник_катерогий_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.Справочник_катерогийTableAdapter();
+            this.Справочник_систем_проведения_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.Справочник_систем_проведенияTableAdapter();
+            this.Справочник_кортов_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.Справочник_кортовTableAdapter();
+            this.Код_турнира_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Наименование_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Код_категории_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Код_системы_проведения_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Количество_участников_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Разряд_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Количество_групп_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Дата_начала_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Дата_конца_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Количество_кортов_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Код_корта_DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Код_корта_DataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Код_корта_DataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Время_начала_проведения_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Время_конца_проведения_dataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Длительность_матча_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ФИО_директора_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Телефон_директора_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Количество_сеянных_участников_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.main_menuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courtDS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kp2DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.справочникКортовBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.справочникКортовBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.справочникКортовBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Category_bindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.category_DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.справочникКатерогийBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.турнирыBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tournaments_Dataset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Турниры_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Справочник_катерогий_BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.кп2_BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.кп2_DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Справочник_систем_проведения_BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Справочник_кортов_BindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Справочник_кортов_BindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Справочник_кортов_BindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Турниры_BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // main_menuStrip
@@ -92,7 +89,7 @@
             this.Catalogs_MenuItem});
             this.main_menuStrip.Location = new System.Drawing.Point(0, 0);
             this.main_menuStrip.Name = "main_menuStrip";
-            this.main_menuStrip.Size = new System.Drawing.Size(1440, 24);
+            this.main_menuStrip.Size = new System.Drawing.Size(1274, 24);
             this.main_menuStrip.TabIndex = 0;
             this.main_menuStrip.Text = "menuStrip1";
             // 
@@ -157,239 +154,261 @@
             this.Catalog_players_MenuItem.Size = new System.Drawing.Size(252, 22);
             this.Catalog_players_MenuItem.Text = "Справочник игроков";
             // 
-            // dataGridView1
+            // Турниры_DataGridView
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.кодТурнираDataGridViewTextBoxColumn,
-            this.наименованиеDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn1,
-            this.количествоУчастниковDataGridViewTextBoxColumn,
-            this.разрядDataGridViewTextBoxColumn,
-            this.количествоГруппDataGridViewTextBoxColumn,
-            this.датаНачалаDataGridViewTextBoxColumn,
-            this.датаКонцаDataGridViewTextBoxColumn,
-            this.количествоКортовDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.времяНачалаПроведенияDataGridViewTextBoxColumn,
-            this.времяКонцаПроведенияDataGridViewTextBoxColumn,
-            this.длительностьМатчаDataGridViewTextBoxColumn,
-            this.фИОДиректораDataGridViewTextBoxColumn,
-            this.телефонДиректораDataGridViewTextBoxColumn,
-            this.количествоСеянныхУчастниковDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn2});
-            this.dataGridView1.DataSource = this.турнирыBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 38);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1428, 150);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.Турниры_DataGridView.AutoGenerateColumns = false;
+            this.Турниры_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Турниры_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Код_турнира_DataGridViewTextBoxColumn,
+            this.Наименование_DataGridViewTextBoxColumn,
+            this.Код_категории_DataGridViewTextBoxColumn,
+            this.Код_системы_проведения_DataGridViewTextBoxColumn,
+            this.Количество_участников_DataGridViewTextBoxColumn,
+            this.Разряд_DataGridViewTextBoxColumn,
+            this.Количество_групп_DataGridViewTextBoxColumn,
+            this.Дата_начала_DataGridViewTextBoxColumn,
+            this.Дата_конца_DataGridViewTextBoxColumn,
+            this.Количество_кортов_DataGridViewTextBoxColumn,
+            this.Код_корта_DataGridViewTextBoxColumn1,
+            this.Код_корта_DataGridViewTextBoxColumn2,
+            this.Код_корта_DataGridViewTextBoxColumn3,
+            this.Время_начала_проведения_DataGridViewTextBoxColumn,
+            this.Время_конца_проведения_dataGridViewTextBoxColumn,
+            this.Длительность_матча_DataGridViewTextBoxColumn,
+            this.ФИО_директора_DataGridViewTextBoxColumn,
+            this.Телефон_директора_DataGridViewTextBoxColumn,
+            this.Количество_сеянных_участников_DataGridViewTextBoxColumn});
+            this.Турниры_DataGridView.DataSource = this.Турниры_BindingSource;
+            this.Турниры_DataGridView.Location = new System.Drawing.Point(0, 38);
+            this.Турниры_DataGridView.Name = "Турниры_DataGridView";
+            this.Турниры_DataGridView.Size = new System.Drawing.Size(1266, 150);
+            this.Турниры_DataGridView.TabIndex = 1;
+            this.Турниры_DataGridView.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.Турниры_DataGridView_RowLeave);
             // 
-            // courtDS
+            // Справочник_катерогий_BindingSource
             // 
-            this.courtDS.DataSource = this.kp2DataSet;
-            this.courtDS.Position = 0;
+            this.Справочник_катерогий_BindingSource.DataMember = "Справочник катерогий";
+            this.Справочник_катерогий_BindingSource.DataSource = this.кп2_BindingSource;
             // 
-            // kp2DataSet
+            // кп2_BindingSource
             // 
-            this.kp2DataSet.DataSetName = "kp2DataSet";
-            this.kp2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.кп2_BindingSource.DataSource = this.кп2_DataSet;
+            this.кп2_BindingSource.Position = 0;
             // 
-            // справочникКортовBindingSource
+            // кп2_DataSet
             // 
-            this.справочникКортовBindingSource.DataMember = "Справочник кортов";
-            this.справочникКортовBindingSource.DataSource = this.courtDS;
+            this.кп2_DataSet.DataSetName = "кп2_DataSet";
+            this.кп2_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // справочник_кортовTableAdapter
+            // Справочник_систем_проведения_BindingSource
             // 
-            this.справочник_кортовTableAdapter.ClearBeforeFill = true;
+            this.Справочник_систем_проведения_BindingSource.DataMember = "Справочник систем проведения";
+            this.Справочник_систем_проведения_BindingSource.DataSource = this.кп2_BindingSource;
             // 
-            // справочникКортовBindingSource1
+            // Справочник_кортов_BindingSource1
             // 
-            this.справочникКортовBindingSource1.DataMember = "Справочник кортов";
-            this.справочникКортовBindingSource1.DataSource = this.courtDS;
+            this.Справочник_кортов_BindingSource1.DataMember = "Справочник кортов";
+            this.Справочник_кортов_BindingSource1.DataSource = this.кп2_BindingSource;
             // 
-            // справочникКортовBindingSource2
+            // Справочник_кортов_BindingSource2
             // 
-            this.справочникКортовBindingSource2.DataMember = "Справочник кортов";
-            this.справочникКортовBindingSource2.DataSource = this.courtDS;
+            this.Справочник_кортов_BindingSource2.DataMember = "Справочник кортов";
+            this.Справочник_кортов_BindingSource2.DataSource = this.кп2_BindingSource;
             // 
-            // Category_bindingSource
+            // Справочник_кортов_BindingSource3
             // 
-            this.Category_bindingSource.DataSource = this.category_DataSet;
-            this.Category_bindingSource.Position = 0;
+            this.Справочник_кортов_BindingSource3.DataMember = "Справочник кортов";
+            this.Справочник_кортов_BindingSource3.DataSource = this.кп2_BindingSource;
             // 
-            // category_DataSet
+            // Турниры_BindingSource
             // 
-            this.category_DataSet.DataSetName = "Category_DataSet";
-            this.category_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.Турниры_BindingSource.DataMember = "Турниры";
+            this.Турниры_BindingSource.DataSource = this.кп2_BindingSource;
             // 
-            // справочникКатерогийBindingSource
+            // Турниры_TableAdapter
             // 
-            this.справочникКатерогийBindingSource.DataMember = "Справочник катерогий";
-            this.справочникКатерогийBindingSource.DataSource = this.Category_bindingSource;
+            this.Турниры_TableAdapter.ClearBeforeFill = true;
             // 
-            // справочник_катерогийTableAdapter
+            // Справочник_катерогий_TableAdapter
             // 
-            this.справочник_катерогийTableAdapter.ClearBeforeFill = true;
+            this.Справочник_катерогий_TableAdapter.ClearBeforeFill = true;
             // 
-            // кодТурнираDataGridViewTextBoxColumn
+            // Справочник_систем_проведения_TableAdapter
             // 
-            this.кодТурнираDataGridViewTextBoxColumn.DataPropertyName = "Код турнира";
-            this.кодТурнираDataGridViewTextBoxColumn.HeaderText = "Код турнира";
-            this.кодТурнираDataGridViewTextBoxColumn.Name = "кодТурнираDataGridViewTextBoxColumn";
+            this.Справочник_систем_проведения_TableAdapter.ClearBeforeFill = true;
             // 
-            // наименованиеDataGridViewTextBoxColumn
+            // Справочник_кортов_TableAdapter
             // 
-            this.наименованиеDataGridViewTextBoxColumn.DataPropertyName = "Наименование";
-            this.наименованиеDataGridViewTextBoxColumn.HeaderText = "Наименование";
-            this.наименованиеDataGridViewTextBoxColumn.Name = "наименованиеDataGridViewTextBoxColumn";
+            this.Справочник_кортов_TableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // Код_турнира_DataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Код категории";
-            this.dataGridViewTextBoxColumn1.DataSource = this.справочникКатерогийBindingSource;
-            this.dataGridViewTextBoxColumn1.DisplayMember = "Название категории";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Код категории";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn1.ValueMember = "Код категории";
+            this.Код_турнира_DataGridViewTextBoxColumn.DataPropertyName = "Код турнира";
+            this.Код_турнира_DataGridViewTextBoxColumn.HeaderText = "Код турнира";
+            this.Код_турнира_DataGridViewTextBoxColumn.Name = "Код_турнира_DataGridViewTextBoxColumn";
+            this.Код_турнира_DataGridViewTextBoxColumn.ReadOnly = true;
+            this.Код_турнира_DataGridViewTextBoxColumn.Visible = false;
             // 
-            // количествоУчастниковDataGridViewTextBoxColumn
+            // Наименование_DataGridViewTextBoxColumn
             // 
-            this.количествоУчастниковDataGridViewTextBoxColumn.DataPropertyName = "Количество участников";
-            this.количествоУчастниковDataGridViewTextBoxColumn.HeaderText = "Количество участников";
-            this.количествоУчастниковDataGridViewTextBoxColumn.Name = "количествоУчастниковDataGridViewTextBoxColumn";
+            this.Наименование_DataGridViewTextBoxColumn.DataPropertyName = "Наименование";
+            this.Наименование_DataGridViewTextBoxColumn.HeaderText = "Наименование турнира";
+            this.Наименование_DataGridViewTextBoxColumn.Name = "Наименование_DataGridViewTextBoxColumn";
             // 
-            // разрядDataGridViewTextBoxColumn
-            // 
-            this.разрядDataGridViewTextBoxColumn.DataPropertyName = "Разряд";
-            this.разрядDataGridViewTextBoxColumn.HeaderText = "Разряд";
-            this.разрядDataGridViewTextBoxColumn.Name = "разрядDataGridViewTextBoxColumn";
-            // 
-            // количествоГруппDataGridViewTextBoxColumn
-            // 
-            this.количествоГруппDataGridViewTextBoxColumn.DataPropertyName = "Количество групп";
-            this.количествоГруппDataGridViewTextBoxColumn.HeaderText = "Количество групп";
-            this.количествоГруппDataGridViewTextBoxColumn.Name = "количествоГруппDataGridViewTextBoxColumn";
-            // 
-            // датаНачалаDataGridViewTextBoxColumn
-            // 
-            this.датаНачалаDataGridViewTextBoxColumn.DataPropertyName = "Дата начала";
-            this.датаНачалаDataGridViewTextBoxColumn.HeaderText = "Дата начала";
-            this.датаНачалаDataGridViewTextBoxColumn.Name = "датаНачалаDataGridViewTextBoxColumn";
-            // 
-            // датаКонцаDataGridViewTextBoxColumn
-            // 
-            this.датаКонцаDataGridViewTextBoxColumn.DataPropertyName = "Дата конца";
-            this.датаКонцаDataGridViewTextBoxColumn.HeaderText = "Дата конца";
-            this.датаКонцаDataGridViewTextBoxColumn.Name = "датаКонцаDataGridViewTextBoxColumn";
-            // 
-            // количествоКортовDataGridViewTextBoxColumn
-            // 
-            this.количествоКортовDataGridViewTextBoxColumn.DataPropertyName = "Количество кортов";
-            this.количествоКортовDataGridViewTextBoxColumn.HeaderText = "Количество кортов";
-            this.количествоКортовDataGridViewTextBoxColumn.Name = "количествоКортовDataGridViewTextBoxColumn";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Код корта 1";
-            this.dataGridViewTextBoxColumn3.DataSource = this.справочникКортовBindingSource;
-            this.dataGridViewTextBoxColumn3.DisplayMember = "Название корта";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Код корта 1";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn3.ValueMember = "Код корта";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Код корта 2";
-            this.dataGridViewTextBoxColumn4.DataSource = this.справочникКортовBindingSource1;
-            this.dataGridViewTextBoxColumn4.DisplayMember = "Название корта";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Код корта 2";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn4.ValueMember = "Код корта";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Код корта 3";
-            this.dataGridViewTextBoxColumn5.DataSource = this.справочникКортовBindingSource2;
-            this.dataGridViewTextBoxColumn5.DisplayMember = "Название корта";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Код корта 3";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn5.ValueMember = "Код корта";
-            // 
-            // времяНачалаПроведенияDataGridViewTextBoxColumn
-            // 
-            this.времяНачалаПроведенияDataGridViewTextBoxColumn.DataPropertyName = "Время начала проведения";
-            this.времяНачалаПроведенияDataGridViewTextBoxColumn.HeaderText = "Время начала проведения";
-            this.времяНачалаПроведенияDataGridViewTextBoxColumn.Name = "времяНачалаПроведенияDataGridViewTextBoxColumn";
-            // 
-            // времяКонцаПроведенияDataGridViewTextBoxColumn
-            // 
-            this.времяКонцаПроведенияDataGridViewTextBoxColumn.DataPropertyName = "Время конца проведения";
-            this.времяКонцаПроведенияDataGridViewTextBoxColumn.HeaderText = "Время конца проведения";
-            this.времяКонцаПроведенияDataGridViewTextBoxColumn.Name = "времяКонцаПроведенияDataGridViewTextBoxColumn";
-            // 
-            // длительностьМатчаDataGridViewTextBoxColumn
-            // 
-            this.длительностьМатчаDataGridViewTextBoxColumn.DataPropertyName = "Длительность матча";
-            this.длительностьМатчаDataGridViewTextBoxColumn.HeaderText = "Длительность матча";
-            this.длительностьМатчаDataGridViewTextBoxColumn.Name = "длительностьМатчаDataGridViewTextBoxColumn";
-            // 
-            // фИОДиректораDataGridViewTextBoxColumn
-            // 
-            this.фИОДиректораDataGridViewTextBoxColumn.DataPropertyName = "ФИО директора";
-            this.фИОДиректораDataGridViewTextBoxColumn.HeaderText = "ФИО директора";
-            this.фИОДиректораDataGridViewTextBoxColumn.Name = "фИОДиректораDataGridViewTextBoxColumn";
-            // 
-            // телефонДиректораDataGridViewTextBoxColumn
-            // 
-            this.телефонДиректораDataGridViewTextBoxColumn.DataPropertyName = "Телефон директора";
-            this.телефонДиректораDataGridViewTextBoxColumn.HeaderText = "Телефон директора";
-            this.телефонДиректораDataGridViewTextBoxColumn.Name = "телефонДиректораDataGridViewTextBoxColumn";
-            // 
-            // количествоСеянныхУчастниковDataGridViewTextBoxColumn
-            // 
-            this.количествоСеянныхУчастниковDataGridViewTextBoxColumn.DataPropertyName = "Количество сеянных участников";
-            this.количествоСеянныхУчастниковDataGridViewTextBoxColumn.HeaderText = "Количество сеянных участников";
-            this.количествоСеянныхУчастниковDataGridViewTextBoxColumn.Name = "количествоСеянныхУчастниковDataGridViewTextBoxColumn";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Код системы проведения";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Код системы проведения";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // турнирыBindingSource
-            // 
-            this.турнирыBindingSource.DataMember = "Турниры";
-            this.турнирыBindingSource.DataSource = this.tournaments_Dataset;
-            // 
-            // tournaments_Dataset
-            // 
-            this.tournaments_Dataset.DataSetName = "Tournaments_Dataset";
-            this.tournaments_Dataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // турнирыTableAdapter
-            // 
-            this.турнирыTableAdapter.ClearBeforeFill = true;
+            // Код_категории_DataGridViewTextBoxColumn
+            // 
+            this.Код_категории_DataGridViewTextBoxColumn.DataPropertyName = "Код категории";
+            this.Код_категории_DataGridViewTextBoxColumn.DataSource = this.Справочник_катерогий_BindingSource;
+            this.Код_категории_DataGridViewTextBoxColumn.DisplayMember = "Название категории";
+            this.Код_категории_DataGridViewTextBoxColumn.DisplayStyleForCurrentCellOnly = true;
+            this.Код_категории_DataGridViewTextBoxColumn.HeaderText = "Категория";
+            this.Код_категории_DataGridViewTextBoxColumn.Name = "Код_категории_DataGridViewTextBoxColumn";
+            this.Код_категории_DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Код_категории_DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Код_категории_DataGridViewTextBoxColumn.ValueMember = "Код категории";
+            this.Код_категории_DataGridViewTextBoxColumn.Width = 63;
+            // 
+            // Код_системы_проведения_DataGridViewTextBoxColumn
+            // 
+            this.Код_системы_проведения_DataGridViewTextBoxColumn.DataPropertyName = "Код системы проведения";
+            this.Код_системы_проведения_DataGridViewTextBoxColumn.DataSource = this.Справочник_систем_проведения_BindingSource;
+            this.Код_системы_проведения_DataGridViewTextBoxColumn.DisplayMember = "Название системы";
+            this.Код_системы_проведения_DataGridViewTextBoxColumn.DisplayStyleForCurrentCellOnly = true;
+            this.Код_системы_проведения_DataGridViewTextBoxColumn.HeaderText = "Система проведения";
+            this.Код_системы_проведения_DataGridViewTextBoxColumn.Name = "Код_системы_проведения_DataGridViewTextBoxColumn";
+            this.Код_системы_проведения_DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Код_системы_проведения_DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Код_системы_проведения_DataGridViewTextBoxColumn.ValueMember = "Код системы";
+            this.Код_системы_проведения_DataGridViewTextBoxColumn.Width = 110;
+            // 
+            // Количество_участников_DataGridViewTextBoxColumn
+            // 
+            this.Количество_участников_DataGridViewTextBoxColumn.DataPropertyName = "Количество участников";
+            this.Количество_участников_DataGridViewTextBoxColumn.HeaderText = "Количество участников";
+            this.Количество_участников_DataGridViewTextBoxColumn.Name = "Количество_участников_DataGridViewTextBoxColumn";
+            // 
+            // Разряд_DataGridViewTextBoxColumn
+            // 
+            this.Разряд_DataGridViewTextBoxColumn.DataPropertyName = "Разряд";
+            this.Разряд_DataGridViewTextBoxColumn.DisplayStyleForCurrentCellOnly = true;
+            this.Разряд_DataGridViewTextBoxColumn.HeaderText = "Разряд";
+            this.Разряд_DataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "Одиночный женский",
+            "Парный женский",
+            "Одиночный мужской",
+            "Парный мужской",
+            "Смешанный парный"});
+            this.Разряд_DataGridViewTextBoxColumn.Name = "Разряд_DataGridViewTextBoxColumn";
+            this.Разряд_DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Разряд_DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Разряд_DataGridViewTextBoxColumn.Width = 115;
+            // 
+            // Количество_групп_DataGridViewTextBoxColumn
+            // 
+            this.Количество_групп_DataGridViewTextBoxColumn.DataPropertyName = "Количество групп";
+            this.Количество_групп_DataGridViewTextBoxColumn.HeaderText = "Количество групп";
+            this.Количество_групп_DataGridViewTextBoxColumn.Name = "Количество_групп_DataGridViewTextBoxColumn";
+            // 
+            // Дата_начала_DataGridViewTextBoxColumn
+            // 
+            this.Дата_начала_DataGridViewTextBoxColumn.DataPropertyName = "Дата начала";
+            this.Дата_начала_DataGridViewTextBoxColumn.HeaderText = "Дата начала";
+            this.Дата_начала_DataGridViewTextBoxColumn.Name = "Дата_начала_DataGridViewTextBoxColumn";
+            // 
+            // Дата_конца_DataGridViewTextBoxColumn
+            // 
+            this.Дата_конца_DataGridViewTextBoxColumn.DataPropertyName = "Дата конца";
+            this.Дата_конца_DataGridViewTextBoxColumn.HeaderText = "Дата конца";
+            this.Дата_конца_DataGridViewTextBoxColumn.Name = "Дата_конца_DataGridViewTextBoxColumn";
+            // 
+            // Количество_кортов_DataGridViewTextBoxColumn
+            // 
+            this.Количество_кортов_DataGridViewTextBoxColumn.DataPropertyName = "Количество кортов";
+            this.Количество_кортов_DataGridViewTextBoxColumn.HeaderText = "Количество кортов";
+            this.Количество_кортов_DataGridViewTextBoxColumn.Name = "Количество_кортов_DataGridViewTextBoxColumn";
+            // 
+            // Код_корта_DataGridViewTextBoxColumn1
+            // 
+            this.Код_корта_DataGridViewTextBoxColumn1.DataPropertyName = "Код корта 1";
+            this.Код_корта_DataGridViewTextBoxColumn1.DataSource = this.Справочник_кортов_BindingSource1;
+            this.Код_корта_DataGridViewTextBoxColumn1.DisplayMember = "Название корта";
+            this.Код_корта_DataGridViewTextBoxColumn1.DisplayStyleForCurrentCellOnly = true;
+            this.Код_корта_DataGridViewTextBoxColumn1.HeaderText = "Название корта 1";
+            this.Код_корта_DataGridViewTextBoxColumn1.Name = "Код_корта_DataGridViewTextBoxColumn1";
+            this.Код_корта_DataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Код_корта_DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Код_корта_DataGridViewTextBoxColumn1.ValueMember = "Код корта";
+            // 
+            // Код_корта_DataGridViewTextBoxColumn2
+            // 
+            this.Код_корта_DataGridViewTextBoxColumn2.DataPropertyName = "Код корта 2";
+            this.Код_корта_DataGridViewTextBoxColumn2.DataSource = this.Справочник_кортов_BindingSource2;
+            this.Код_корта_DataGridViewTextBoxColumn2.DisplayMember = "Название корта";
+            this.Код_корта_DataGridViewTextBoxColumn2.DisplayStyleForCurrentCellOnly = true;
+            this.Код_корта_DataGridViewTextBoxColumn2.HeaderText = "Название корта 2";
+            this.Код_корта_DataGridViewTextBoxColumn2.Name = "Код_корта_DataGridViewTextBoxColumn2";
+            this.Код_корта_DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Код_корта_DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Код_корта_DataGridViewTextBoxColumn2.ValueMember = "Код корта";
+            // 
+            // Код_корта_DataGridViewTextBoxColumn3
+            // 
+            this.Код_корта_DataGridViewTextBoxColumn3.DataPropertyName = "Код корта 3";
+            this.Код_корта_DataGridViewTextBoxColumn3.DataSource = this.Справочник_кортов_BindingSource3;
+            this.Код_корта_DataGridViewTextBoxColumn3.DisplayMember = "Название корта";
+            this.Код_корта_DataGridViewTextBoxColumn3.DisplayStyleForCurrentCellOnly = true;
+            this.Код_корта_DataGridViewTextBoxColumn3.HeaderText = "Название корта 3";
+            this.Код_корта_DataGridViewTextBoxColumn3.Name = "Код_корта_DataGridViewTextBoxColumn3";
+            this.Код_корта_DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Код_корта_DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Код_корта_DataGridViewTextBoxColumn3.ValueMember = "Код корта";
+            // 
+            // Время_начала_проведения_DataGridViewTextBoxColumn
+            // 
+            this.Время_начала_проведения_DataGridViewTextBoxColumn.DataPropertyName = "Время начала проведения";
+            dataGridViewCellStyle1.Format = "HH:mm";
+            this.Время_начала_проведения_DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Время_начала_проведения_DataGridViewTextBoxColumn.HeaderText = "Время начала проведения";
+            this.Время_начала_проведения_DataGridViewTextBoxColumn.Name = "Время_начала_проведения_DataGridViewTextBoxColumn";
+            // 
+            // Время_конца_проведения_dataGridViewTextBoxColumn
+            // 
+            this.Время_конца_проведения_dataGridViewTextBoxColumn.DataPropertyName = "Время конца проведения";
+            dataGridViewCellStyle2.Format = "HH:mm";
+            this.Время_конца_проведения_dataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Время_конца_проведения_dataGridViewTextBoxColumn.HeaderText = "Время конца проведения";
+            this.Время_конца_проведения_dataGridViewTextBoxColumn.Name = "Время_конца_проведения_dataGridViewTextBoxColumn";
+            // 
+            // Длительность_матча_DataGridViewTextBoxColumn
+            // 
+            this.Длительность_матча_DataGridViewTextBoxColumn.DataPropertyName = "Длительность матча";
+            this.Длительность_матча_DataGridViewTextBoxColumn.HeaderText = "Длительность матча";
+            this.Длительность_матча_DataGridViewTextBoxColumn.Name = "Длительность_матча_DataGridViewTextBoxColumn";
+            // 
+            // ФИО_директора_DataGridViewTextBoxColumn
+            // 
+            this.ФИО_директора_DataGridViewTextBoxColumn.DataPropertyName = "ФИО директора";
+            this.ФИО_директора_DataGridViewTextBoxColumn.HeaderText = "ФИО директора";
+            this.ФИО_директора_DataGridViewTextBoxColumn.Name = "ФИО_директора_DataGridViewTextBoxColumn";
+            // 
+            // Телефон_директора_DataGridViewTextBoxColumn
+            // 
+            this.Телефон_директора_DataGridViewTextBoxColumn.DataPropertyName = "Телефон директора";
+            this.Телефон_директора_DataGridViewTextBoxColumn.HeaderText = "Телефон директора";
+            this.Телефон_директора_DataGridViewTextBoxColumn.Name = "Телефон_директора_DataGridViewTextBoxColumn";
+            // 
+            // Количество_сеянных_участников_DataGridViewTextBoxColumn
+            // 
+            this.Количество_сеянных_участников_DataGridViewTextBoxColumn.DataPropertyName = "Количество сеянных участников";
+            this.Количество_сеянных_участников_DataGridViewTextBoxColumn.HeaderText = "Количество сеянных участников";
+            this.Количество_сеянных_участников_DataGridViewTextBoxColumn.Name = "Количество_сеянных_участников_DataGridViewTextBoxColumn";
             // 
             // main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1440, 523);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1274, 523);
+            this.Controls.Add(this.Турниры_DataGridView);
             this.Controls.Add(this.main_menuStrip);
             this.MainMenuStrip = this.main_menuStrip;
             this.Name = "main_form";
@@ -397,17 +416,15 @@
             this.Load += new System.EventHandler(this.main_form_Load);
             this.main_menuStrip.ResumeLayout(false);
             this.main_menuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courtDS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kp2DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.справочникКортовBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.справочникКортовBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.справочникКортовBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Category_bindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.category_DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.справочникКатерогийBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.турнирыBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tournaments_Dataset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Турниры_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Справочник_катерогий_BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.кп2_BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.кп2_DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Справочник_систем_проведения_BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Справочник_кортов_BindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Справочник_кортов_BindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Справочник_кортов_BindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Турниры_BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,46 +439,40 @@
         private System.Windows.Forms.ToolStripMenuItem Catalogs_MenuItem;
         private System.Windows.Forms.ToolStripMenuItem Catalog_category_MenuItem;
         private System.Windows.Forms.ToolStripMenuItem Catalog_system_MenuItem;
-        private Tournaments_Dataset tournaments_Dataset;
-        private System.Windows.Forms.BindingSource турнирыBindingSource;
-        private Tournaments_DatasetTableAdapters.ТурнирыTableAdapter турнирыTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn кодКатегорииDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn кодСистемыПроведенияDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn кодКорта1DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn кодКорта2DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn кодКорта3DataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStripMenuItem Catalog_etap_MenuItem;
         private System.Windows.Forms.ToolStripMenuItem Catalog_court_MenuItem;
         private System.Windows.Forms.ToolStripMenuItem Catalog_players_MenuItem;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource courtDS;
-        private kp2DataSet kp2DataSet;
-        private System.Windows.Forms.BindingSource справочникКортовBindingSource;
-        private kp2DataSetTableAdapters.Справочник_кортовTableAdapter справочник_кортовTableAdapter;
-        private System.Windows.Forms.BindingSource справочникКортовBindingSource1;
-        private System.Windows.Forms.BindingSource справочникКортовBindingSource2;
-        private System.Windows.Forms.BindingSource Category_bindingSource;
-        private Category_DataSet category_DataSet;
-        private System.Windows.Forms.BindingSource справочникКатерогийBindingSource;
-        private Category_DataSetTableAdapters.Справочник_катерогийTableAdapter справочник_катерогийTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn кодТурнираDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn наименованиеDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn количествоУчастниковDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn разрядDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn количествоГруппDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn датаНачалаDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn датаКонцаDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn количествоКортовDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn времяНачалаПроведенияDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn времяКонцаПроведенияDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn длительностьМатчаDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn фИОДиректораDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn телефонДиректораDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn количествоСеянныхУчастниковDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridView Турниры_DataGridView;
+        private System.Windows.Forms.BindingSource кп2_BindingSource;
+        private кп2_DataSet кп2_DataSet;
+        private System.Windows.Forms.BindingSource Турниры_BindingSource;
+        public  кп2_DataSetTableAdapters.ТурнирыTableAdapter Турниры_TableAdapter;
+        private System.Windows.Forms.BindingSource Справочник_катерогий_BindingSource;
+        private кп2_DataSetTableAdapters.Справочник_катерогийTableAdapter Справочник_катерогий_TableAdapter;
+        private System.Windows.Forms.BindingSource Справочник_систем_проведения_BindingSource;
+        private кп2_DataSetTableAdapters.Справочник_систем_проведенияTableAdapter Справочник_систем_проведения_TableAdapter;
+        private System.Windows.Forms.BindingSource Справочник_кортов_BindingSource1;
+        private кп2_DataSetTableAdapters.Справочник_кортовTableAdapter Справочник_кортов_TableAdapter;
+        private System.Windows.Forms.BindingSource Справочник_кортов_BindingSource2;
+        private System.Windows.Forms.BindingSource Справочник_кортов_BindingSource3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Код_турнира_DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Наименование_DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Код_категории_DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Код_системы_проведения_DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Количество_участников_DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Разряд_DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Количество_групп_DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Дата_начала_DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Дата_конца_DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Количество_кортов_DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Код_корта_DataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Код_корта_DataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Код_корта_DataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Время_начала_проведения_DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Время_конца_проведения_dataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Длительность_матча_DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ФИО_директора_DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Телефон_директора_DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Количество_сеянных_участников_DataGridViewTextBoxColumn;
     }
 }

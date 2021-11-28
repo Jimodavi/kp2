@@ -46,16 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category_DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Category_DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="kp2DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>kp2DataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="main_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,13 +54,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tournaments_Dataset.cs">
-      <DependentUpon>Tournaments_Dataset.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Tournaments_Dataset.Designer.cs">
+    <Compile Include="кп2_DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Tournaments_Dataset.xsd</DependentUpon>
+      <DependentUpon>кп2_DataSet.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="main_form.resx">
       <DependentUpon>main_form.cs</DependentUpon>
@@ -84,28 +71,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Category_DataSet.xsc">
-      <DependentUpon>Category_DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Category_DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Category_DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Category_DataSet.xss">
-      <DependentUpon>Category_DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="kp2DataSet.xsc">
-      <DependentUpon>kp2DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="kp2DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>kp2DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="kp2DataSet.xss">
-      <DependentUpon>kp2DataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -115,16 +80,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Tournaments_Dataset.xsc">
-      <DependentUpon>Tournaments_Dataset.xsd</DependentUpon>
+    <None Include="кп2_DataSet.xsc">
+      <DependentUpon>кп2_DataSet.xsd</DependentUpon>
     </None>
-    <None Include="Tournaments_Dataset.xsd">
+    <None Include="кп2_DataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Tournaments_Dataset.Designer.cs</LastGenOutput>
+      <LastGenOutput>кп2_DataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Tournaments_Dataset.xss">
-      <DependentUpon>Tournaments_Dataset.xsd</DependentUpon>
+    <None Include="кп2_DataSet.xss">
+      <DependentUpon>кп2_DataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
