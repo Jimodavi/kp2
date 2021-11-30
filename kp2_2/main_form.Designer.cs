@@ -37,22 +37,14 @@
             this.Catalog_court_MenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Catalog_players_MenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Турниры_DataGridView = new System.Windows.Forms.DataGridView();
-            this.Справочник_катерогий_BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.кп2_BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.кп2_DataSet = new kp2_2.кп2_DataSet();
-            this.Справочник_систем_проведения_BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Справочник_кортов_BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.Справочник_кортов_BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.Справочник_кортов_BindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.Турниры_BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Турниры_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.ТурнирыTableAdapter();
-            this.Справочник_катерогий_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.Справочник_катерогийTableAdapter();
-            this.Справочник_систем_проведения_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.Справочник_систем_проведенияTableAdapter();
-            this.Справочник_кортов_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.Справочник_кортовTableAdapter();
             this.Код_турнира_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Наименование_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Код_категории_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Справочник_катерогий_BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.кп2_BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.кп2_DataSet = new kp2_2.кп2_DataSet();
             this.Код_системы_проведения_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Справочник_систем_проведения_BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Количество_участников_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Разряд_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Количество_групп_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,14 +52,22 @@
             this.Дата_конца_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Количество_кортов_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Код_корта_DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Справочник_кортов_BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Код_корта_DataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Справочник_кортов_BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.Код_корта_DataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Справочник_кортов_BindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.Время_начала_проведения_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Время_конца_проведения_dataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Длительность_матча_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ФИО_директора_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Телефон_директора_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Количество_сеянных_участников_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Турниры_BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Турниры_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.ТурнирыTableAdapter();
+            this.Справочник_катерогий_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.Справочник_катерогийTableAdapter();
+            this.Справочник_систем_проведения_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.Справочник_систем_проведенияTableAdapter();
+            this.Справочник_кортов_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.Справочник_кортовTableAdapter();
             this.main_menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Турниры_DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Справочник_катерогий_BindingSource)).BeginInit();
@@ -183,63 +183,10 @@
             this.Турниры_DataGridView.Name = "Турниры_DataGridView";
             this.Турниры_DataGridView.Size = new System.Drawing.Size(1266, 150);
             this.Турниры_DataGridView.TabIndex = 1;
-            this.Турниры_DataGridView.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.Турниры_DataGridView_RowLeave);
-            // 
-            // Справочник_катерогий_BindingSource
-            // 
-            this.Справочник_катерогий_BindingSource.DataMember = "Справочник катерогий";
-            this.Справочник_катерогий_BindingSource.DataSource = this.кп2_BindingSource;
-            // 
-            // кп2_BindingSource
-            // 
-            this.кп2_BindingSource.DataSource = this.кп2_DataSet;
-            this.кп2_BindingSource.Position = 0;
-            // 
-            // кп2_DataSet
-            // 
-            this.кп2_DataSet.DataSetName = "кп2_DataSet";
-            this.кп2_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Справочник_систем_проведения_BindingSource
-            // 
-            this.Справочник_систем_проведения_BindingSource.DataMember = "Справочник систем проведения";
-            this.Справочник_систем_проведения_BindingSource.DataSource = this.кп2_BindingSource;
-            // 
-            // Справочник_кортов_BindingSource1
-            // 
-            this.Справочник_кортов_BindingSource1.DataMember = "Справочник кортов";
-            this.Справочник_кортов_BindingSource1.DataSource = this.кп2_BindingSource;
-            // 
-            // Справочник_кортов_BindingSource2
-            // 
-            this.Справочник_кортов_BindingSource2.DataMember = "Справочник кортов";
-            this.Справочник_кортов_BindingSource2.DataSource = this.кп2_BindingSource;
-            // 
-            // Справочник_кортов_BindingSource3
-            // 
-            this.Справочник_кортов_BindingSource3.DataMember = "Справочник кортов";
-            this.Справочник_кортов_BindingSource3.DataSource = this.кп2_BindingSource;
-            // 
-            // Турниры_BindingSource
-            // 
-            this.Турниры_BindingSource.DataMember = "Турниры";
-            this.Турниры_BindingSource.DataSource = this.кп2_BindingSource;
-            // 
-            // Турниры_TableAdapter
-            // 
-            this.Турниры_TableAdapter.ClearBeforeFill = true;
-            // 
-            // Справочник_катерогий_TableAdapter
-            // 
-            this.Справочник_катерогий_TableAdapter.ClearBeforeFill = true;
-            // 
-            // Справочник_систем_проведения_TableAdapter
-            // 
-            this.Справочник_систем_проведения_TableAdapter.ClearBeforeFill = true;
-            // 
-            // Справочник_кортов_TableAdapter
-            // 
-            this.Справочник_кортов_TableAdapter.ClearBeforeFill = true;
+            this.Турниры_DataGridView.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.Турниры_DataGridView_CellBeginEdit);
+            this.Турниры_DataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Турниры_DataGridView_CellEndEdit);
+            this.Турниры_DataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Турниры_DataGridView_CellMouseClick);
+            this.Турниры_DataGridView.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.Турниры_DataGridView_UserAddedRow);
             // 
             // Код_турнира_DataGridViewTextBoxColumn
             // 
@@ -268,6 +215,21 @@
             this.Код_категории_DataGridViewTextBoxColumn.ValueMember = "Код категории";
             this.Код_категории_DataGridViewTextBoxColumn.Width = 63;
             // 
+            // Справочник_катерогий_BindingSource
+            // 
+            this.Справочник_катерогий_BindingSource.DataMember = "Справочник катерогий";
+            this.Справочник_катерогий_BindingSource.DataSource = this.кп2_BindingSource;
+            // 
+            // кп2_BindingSource
+            // 
+            this.кп2_BindingSource.DataSource = this.кп2_DataSet;
+            this.кп2_BindingSource.Position = 0;
+            // 
+            // кп2_DataSet
+            // 
+            this.кп2_DataSet.DataSetName = "кп2_DataSet";
+            this.кп2_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Код_системы_проведения_DataGridViewTextBoxColumn
             // 
             this.Код_системы_проведения_DataGridViewTextBoxColumn.DataPropertyName = "Код системы проведения";
@@ -280,6 +242,11 @@
             this.Код_системы_проведения_DataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Код_системы_проведения_DataGridViewTextBoxColumn.ValueMember = "Код системы";
             this.Код_системы_проведения_DataGridViewTextBoxColumn.Width = 110;
+            // 
+            // Справочник_систем_проведения_BindingSource
+            // 
+            this.Справочник_систем_проведения_BindingSource.DataMember = "Справочник систем проведения";
+            this.Справочник_систем_проведения_BindingSource.DataSource = this.кп2_BindingSource;
             // 
             // Количество_участников_DataGridViewTextBoxColumn
             // 
@@ -339,6 +306,11 @@
             this.Код_корта_DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Код_корта_DataGridViewTextBoxColumn1.ValueMember = "Код корта";
             // 
+            // Справочник_кортов_BindingSource1
+            // 
+            this.Справочник_кортов_BindingSource1.DataMember = "Справочник кортов";
+            this.Справочник_кортов_BindingSource1.DataSource = this.кп2_BindingSource;
+            // 
             // Код_корта_DataGridViewTextBoxColumn2
             // 
             this.Код_корта_DataGridViewTextBoxColumn2.DataPropertyName = "Код корта 2";
@@ -351,6 +323,11 @@
             this.Код_корта_DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Код_корта_DataGridViewTextBoxColumn2.ValueMember = "Код корта";
             // 
+            // Справочник_кортов_BindingSource2
+            // 
+            this.Справочник_кортов_BindingSource2.DataMember = "Справочник кортов";
+            this.Справочник_кортов_BindingSource2.DataSource = this.кп2_BindingSource;
+            // 
             // Код_корта_DataGridViewTextBoxColumn3
             // 
             this.Код_корта_DataGridViewTextBoxColumn3.DataPropertyName = "Код корта 3";
@@ -362,6 +339,11 @@
             this.Код_корта_DataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Код_корта_DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Код_корта_DataGridViewTextBoxColumn3.ValueMember = "Код корта";
+            // 
+            // Справочник_кортов_BindingSource3
+            // 
+            this.Справочник_кортов_BindingSource3.DataMember = "Справочник кортов";
+            this.Справочник_кортов_BindingSource3.DataSource = this.кп2_BindingSource;
             // 
             // Время_начала_проведения_DataGridViewTextBoxColumn
             // 
@@ -402,6 +384,27 @@
             this.Количество_сеянных_участников_DataGridViewTextBoxColumn.DataPropertyName = "Количество сеянных участников";
             this.Количество_сеянных_участников_DataGridViewTextBoxColumn.HeaderText = "Количество сеянных участников";
             this.Количество_сеянных_участников_DataGridViewTextBoxColumn.Name = "Количество_сеянных_участников_DataGridViewTextBoxColumn";
+            // 
+            // Турниры_BindingSource
+            // 
+            this.Турниры_BindingSource.DataMember = "Турниры";
+            this.Турниры_BindingSource.DataSource = this.кп2_BindingSource;
+            // 
+            // Турниры_TableAdapter
+            // 
+            this.Турниры_TableAdapter.ClearBeforeFill = true;
+            // 
+            // Справочник_катерогий_TableAdapter
+            // 
+            this.Справочник_катерогий_TableAdapter.ClearBeforeFill = true;
+            // 
+            // Справочник_систем_проведения_TableAdapter
+            // 
+            this.Справочник_систем_проведения_TableAdapter.ClearBeforeFill = true;
+            // 
+            // Справочник_кортов_TableAdapter
+            // 
+            this.Справочник_кортов_TableAdapter.ClearBeforeFill = true;
             // 
             // main_form
             // 
