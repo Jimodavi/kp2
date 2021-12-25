@@ -9,3 +9,4 @@ D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.cs
 D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.exe
 D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.pdb
 D:\Docs\вуз\Программирование\kursov2\kp2_2\bin\Debug\kp2.accdb
+D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.schedule_form.resources

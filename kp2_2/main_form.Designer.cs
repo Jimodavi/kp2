@@ -25,7 +25,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.main_menuStrip = new System.Windows.Forms.MenuStrip();
             this.Schedule_MenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Draws_MenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -96,8 +95,9 @@
             // Schedule_MenuItem
             // 
             this.Schedule_MenuItem.Name = "Schedule_MenuItem";
-            this.Schedule_MenuItem.Size = new System.Drawing.Size(85, 20);
-            this.Schedule_MenuItem.Text = "Расписиние";
+            this.Schedule_MenuItem.Size = new System.Drawing.Size(84, 20);
+            this.Schedule_MenuItem.Text = "Расписание";
+            this.Schedule_MenuItem.Click += new System.EventHandler(this.Schedule_MenuItem_Click);
             // 
             // Draws_MenuItem
             // 
@@ -179,13 +179,17 @@
             this.Телефон_директора_DataGridViewTextBoxColumn,
             this.Количество_сеянных_участников_DataGridViewTextBoxColumn});
             this.Турниры_DataGridView.DataSource = this.Турниры_BindingSource;
-            this.Турниры_DataGridView.Location = new System.Drawing.Point(0, 38);
+            this.Турниры_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Турниры_DataGridView.Location = new System.Drawing.Point(0, 24);
             this.Турниры_DataGridView.Name = "Турниры_DataGridView";
-            this.Турниры_DataGridView.Size = new System.Drawing.Size(1266, 150);
+            this.Турниры_DataGridView.ShowCellErrors = false;
+            this.Турниры_DataGridView.ShowRowErrors = false;
+            this.Турниры_DataGridView.Size = new System.Drawing.Size(1274, 499);
             this.Турниры_DataGridView.TabIndex = 1;
             this.Турниры_DataGridView.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.Турниры_DataGridView_CellBeginEdit);
             this.Турниры_DataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Турниры_DataGridView_CellEndEdit);
             this.Турниры_DataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Турниры_DataGridView_CellMouseClick);
+            this.Турниры_DataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Турниры_DataGridView_DataError);
             this.Турниры_DataGridView.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.Турниры_DataGridView_UserAddedRow);
             // 
             // Код_турнира_DataGridViewTextBoxColumn
@@ -193,7 +197,6 @@
             this.Код_турнира_DataGridViewTextBoxColumn.DataPropertyName = "Код турнира";
             this.Код_турнира_DataGridViewTextBoxColumn.HeaderText = "Код турнира";
             this.Код_турнира_DataGridViewTextBoxColumn.Name = "Код_турнира_DataGridViewTextBoxColumn";
-            this.Код_турнира_DataGridViewTextBoxColumn.ReadOnly = true;
             this.Код_турнира_DataGridViewTextBoxColumn.Visible = false;
             // 
             // Наименование_DataGridViewTextBoxColumn
@@ -356,8 +359,7 @@
             // Время_конца_проведения_dataGridViewTextBoxColumn
             // 
             this.Время_конца_проведения_dataGridViewTextBoxColumn.DataPropertyName = "Время конца проведения";
-            dataGridViewCellStyle2.Format = "HH:mm";
-            this.Время_конца_проведения_dataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Время_конца_проведения_dataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.Время_конца_проведения_dataGridViewTextBoxColumn.HeaderText = "Время конца проведения";
             this.Время_конца_проведения_dataGridViewTextBoxColumn.Name = "Время_конца_проведения_dataGridViewTextBoxColumn";
             // 

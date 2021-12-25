@@ -16,20 +16,12 @@ namespace kp2_2
         private int max_number_of_courts = 3;
         private int max_number_of_participants = 16;
         private object old_value;
+        public static DataGridViewRow Row_ref;
         public main_form()
         {
             InitializeComponent();
         }
 
-        private void Catalog_category_MenuItem_Click(object sender, EventArgs e)
-        {
-            //Catalog_category novoeokno = new Catalog_category();
-
-            //if (novoeokno.ShowDialog(this) == DialogResult.OK)//новое окно tournaments_form
-            //{
-            //}
-            //else { }
-        }
 
         private void main_form_Load(object sender, EventArgs e)
         {
@@ -59,13 +51,14 @@ namespace kp2_2
                 if (Турниры_DataGridView.Rows[i].Cells[4].Value == DBNull.Value) Турниры_DataGridView.Rows[i].Cells[18].ReadOnly = true;
             }            
         }
-
         private void Турниры_DataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
-                if (MessageBox.Show("Улалить строку?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Удалить турнир?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-
+                    string code = ((DataGridView)sender).Rows[e.RowIndex].Cells[0].Value.ToString();
+                    this.Турниры_TableAdapter.Delete(code);
+                    ((DataGridView)sender).Rows.RemoveAt(e.RowIndex);
                 }
         }
         private void Турниры_DataGridView_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
@@ -75,8 +68,10 @@ namespace kp2_2
         private void Турниры_DataGridView_UserAddedRow(object sender, DataGridViewRowEventArgs e)
         {
             /*Добавление пустой строки в БД*/
-            ((DataGridView)sender).Rows[e.Row.Index-1].Cells[0].Value = (int)((DataGridView)sender).Rows[e.Row.Index - 2].Cells[0].Value + 1;
-            string newelement = "";
+            if ((e.Row.Index - 1) == 0) ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value = 1;
+            else ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value =
+                    (int)((DataGridView)sender).Rows[e.Row.Index - 2].Cells[0].Value + 1; string newelement = "";
+
             newelement += ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value.ToString();
             for (int i = 1; i < 19; i++)
             {
@@ -99,7 +94,6 @@ namespace kp2_2
             /*[Количество сеянных игроков] доступно в зависимости от [Количество игроков]*/
             Турниры_DataGridView.Rows[e.Row.Index - 1].Cells[18].ReadOnly = true;
         }
-
         private void Турниры_DataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value == DBNull.Value) return;
@@ -109,6 +103,7 @@ namespace kp2_2
             string format_time = @"^[0-2][0-9]:[0-5][0-9]$";
             try
             {
+                /*проверка ввода*/
                 switch (e.ColumnIndex)
                 {
                     case 3:
@@ -223,6 +218,7 @@ namespace kp2_2
                         }
                         break;
                 }
+                /*запрос в БД*/
                 string code = ((DataGridView)sender).Rows[e.RowIndex].Cells[0].Value.ToString();
                 string newelement = "";
                 newelement += "[" + кп2_DataSet.Tables["Турниры"].Columns[e.ColumnIndex].ColumnName + "] = ";
@@ -242,6 +238,35 @@ namespace kp2_2
                 ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value = old_value;
                 return;
             }
+        }
+        private void Турниры_DataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show("Неправильный ввод", "Ошибка");
+            return;
+        }
+        private void Schedule_MenuItem_Click(object sender, EventArgs e)
+        {
+            if (Турниры_DataGridView.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Выберите 1 турнир", "Ошибка");
+                return;
+            }
+            schedule_form novoeokno = new schedule_form((int)(Турниры_DataGridView.SelectedRows[0].Cells[0].Value));
+            Row_ref = Турниры_DataGridView.SelectedRows[0];
+
+            if (novoeokno.ShowDialog(this) == DialogResult.OK)//новое окно schedule_form
+            {
+            }
+            else { }
+        }
+        private void Catalog_category_MenuItem_Click(object sender, EventArgs e)
+        {
+            //Catalog_category novoeokno = new Catalog_category();
+
+            //if (novoeokno.ShowDialog(this) == DialogResult.OK)//новое окно
+            //{
+            //}
+            //else { }
         }
     }
 }
