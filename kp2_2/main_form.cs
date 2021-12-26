@@ -68,11 +68,9 @@ namespace kp2_2
         private void Турниры_DataGridView_UserAddedRow(object sender, DataGridViewRowEventArgs e)
         {
             /*Добавление пустой строки в БД*/
-            if ((e.Row.Index - 1) == 0) ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value = 1;
-            else ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value =
-                    (int)((DataGridView)sender).Rows[e.Row.Index - 2].Cells[0].Value + 1; string newelement = "";
+            ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value = кп2_DataSet.Next_DB_index("Код турнира", "Турниры");
 
-            newelement += ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value.ToString();
+            string newelement = ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value.ToString();
             for (int i = 1; i < 19; i++)
             {
                 newelement += ", ";

@@ -46,7 +46,8 @@ namespace kp2_2
         {
 
             /*Добавление пустой строки в БД*/
-            ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value = кп2_DataSet.Tables["Расписание"].Rows.Count + 1;
+            ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value = кп2_DataSet.Next_DB_index("Код матча", "Расписание");
+            
             ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[1].Value = code_tournament;
             string newelement = "";
             newelement += ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value.ToString();
@@ -82,6 +83,7 @@ namespace kp2_2
                         intvalue = (int)((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
                         flag = true;
                         for (int i = 0; i < 3; i++) {
+                            if (main_form.Row_ref.Cells[10 + i].Value != DBNull.Value)
                             if ((int)main_form.Row_ref.Cells[10 + i].Value == intvalue) flag = false;
                         }
                         if (flag)
@@ -106,15 +108,10 @@ namespace kp2_2
                 string code = ((DataGridView)sender).Rows[e.RowIndex].Cells[0].Value.ToString();
                 string newelement = "";
                 newelement += "[" + кп2_DataSet.Tables["Расписание"].Columns[e.ColumnIndex].ColumnName + "] = ";
-                if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ValueType.Name != "String")
-                {
-                    if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ValueType.Name == "DateTime") newelement += "'" + ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].EditedFormattedValue.ToString() + "'";
-                    else newelement += ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-                }
-                else
-                {
-                    newelement += "'" + ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].EditedFormattedValue.ToString() + "'";
-                }
+                
+                if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ValueType.Name == "DateTime") newelement += "'" + ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() + "'";
+                else newelement += ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                
                 this.Расписание_TableAdapter.Update(newelement, code);
             }
             catch (Exception exeption)

@@ -30,7 +30,7 @@ namespace kp2_2
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Расписание_DataGridView = new System.Windows.Forms.DataGridView();
             this.Код_матча_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Код_турнира_DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -107,8 +107,8 @@ namespace kp2_2
             // Время_начала_DataGridViewTextBoxColumn
             // 
             this.Время_начала_DataGridViewTextBoxColumn.DataPropertyName = "Время начала";
-            dataGridViewCellStyle5.Format = "dd.MM.yyyy - HH:mm";
-            this.Время_начала_DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Format = "dd.MM.yyyy - HH:mm";
+            this.Время_начала_DataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.Время_начала_DataGridViewTextBoxColumn.HeaderText = "Время начала";
             this.Время_начала_DataGridViewTextBoxColumn.Name = "Время_начала_DataGridViewTextBoxColumn";
             this.Время_начала_DataGridViewTextBoxColumn.Width = 110;
