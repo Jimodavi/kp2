@@ -23,13 +23,14 @@ namespace kp2_2
 
         private void schedule_form_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "кп2_DataSet.Справочник_кортов". При необходимости она может быть перемещена или удалена.
+            /*загрузка данных кп2_DataSet*/
             this.Справочник_кортов_TableAdapter.Fill(this.кп2_DataSet.Справочник_кортов);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "кп2_DataSet.Расписание". При необходимости она может быть перемещена или удалена.
+            this.Расписание_TableAdapter.Fill(this.кп2_DataSet.Расписание, code_tournament.ToString());
             this.Расписание_TableAdapter.Fill(this.кп2_DataSet.Расписание, code_tournament.ToString());
         }
         private void Расписание_DataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            /*удаление строки правой кнопкой мыши*/
             if (e.Button == MouseButtons.Right)
                 if (MessageBox.Show("Удалить матч?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -40,14 +41,13 @@ namespace kp2_2
         }
         private void Расписание_DataGridView_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
+            /*сохранение прежнего значения клетки для отмены изменений*/
             old_value = ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
         }
         private void Расписание_DataGridView_UserAddedRow(object sender, DataGridViewRowEventArgs e)
         {
-
-            /*Добавление пустой строки в БД*/
+            /*добавление пустой строки в БД*/
             ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value = кп2_DataSet.Next_DB_index("Код матча", "Расписание");
-            
             ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[1].Value = code_tournament;
             string newelement = "";
             newelement += ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value.ToString();
@@ -69,20 +69,20 @@ namespace kp2_2
         }
         private void Расписание_DataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
+            /*проверка ввода*/
             if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value == DBNull.Value) return;
             int intvalue;
             bool flag;
             DateTime datetimevalue;
             string format_date_time = @"^[0-3][0-9].[0-1][0-9].[1-2][0-9][0-9][0-9] - [0-2][0-9]:[0-5][0-9]$";
             try
-            {
-                /*проверка ввода*/
+            {                
                 switch (e.ColumnIndex)
                 {
-                    case 2:
+                    case 2:/*Корт*/
                         intvalue = (int)((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
                         flag = true;
-                        for (int i = 0; i < 3; i++) {
+                        for (int i = 0; (i < 3)&&flag; i++) {
                             if (main_form.Row_ref.Cells[10 + i].Value != DBNull.Value)
                             if ((int)main_form.Row_ref.Cells[10 + i].Value == intvalue) flag = false;
                         }
@@ -94,7 +94,7 @@ namespace kp2_2
                         }
                         break;
                    
-                    case 3:
+                    case 3:/*Время начала*/
                         datetimevalue = (DateTime)((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
                         if (!Regex.IsMatch(((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].EditedFormattedValue.ToString(), format_date_time))
                         {
@@ -104,14 +104,13 @@ namespace kp2_2
                         }
                         break;
                 }
+
                 /*запрос в БД*/
                 string code = ((DataGridView)sender).Rows[e.RowIndex].Cells[0].Value.ToString();
                 string newelement = "";
                 newelement += "[" + кп2_DataSet.Tables["Расписание"].Columns[e.ColumnIndex].ColumnName + "] = ";
-                
                 if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ValueType.Name == "DateTime") newelement += "'" + ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() + "'";
                 else newelement += ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-                
                 this.Расписание_TableAdapter.Update(newelement, code);
             }
             catch (Exception exeption)

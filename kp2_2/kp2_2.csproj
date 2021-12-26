@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="list_participants_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="list_participants_form.Designer.cs">
+      <DependentUpon>list_participants_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="main_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>кп2_DataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="list_participants_form.resx">
+      <DependentUpon>list_participants_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="main_form.resx">
       <DependentUpon>main_form.cs</DependentUpon>
     </EmbeddedResource>

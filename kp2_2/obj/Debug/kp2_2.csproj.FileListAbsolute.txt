@@ -10,3 +10,4 @@ D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.ex
 D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.pdb
 D:\Docs\вуз\Программирование\kursov2\kp2_2\bin\Debug\kp2.accdb
 D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.schedule_form.resources
+D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.list_participants_form.resources
