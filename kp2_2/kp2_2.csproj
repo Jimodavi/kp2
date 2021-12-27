@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="catalog_category_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="catalog_category_form.Designer.cs">
+      <DependentUpon>catalog_category_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="list_participants_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>кп2_DataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="catalog_category_form.resx">
+      <DependentUpon>catalog_category_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="list_participants_form.resx">
       <DependentUpon>list_participants_form.cs</DependentUpon>
     </EmbeddedResource>

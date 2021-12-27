@@ -274,13 +274,12 @@ namespace kp2_2
         }
         private void Catalog_category_MenuItem_Click(object sender, EventArgs e)
         {
-            //Catalog_category novoeokno = new Catalog_category();
+            catalog_category_form novoeokno = new catalog_category_form();
 
-            //if (novoeokno.ShowDialog(this) == DialogResult.OK)//новое окно
-            //{
-            //}
-            //else { }
+            if (novoeokno.ShowDialog(this) == DialogResult.OK)//новое окно catalog_category_form
+            {
+            }
+            else { }
         }
-
     }
 }
