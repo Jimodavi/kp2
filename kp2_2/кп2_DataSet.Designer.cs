@@ -7932,7 +7932,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class Справочник_катерогийTableAdapter : global::System.ComponentModel.Component
     {
-
         private global::System.Data.OleDb.OleDbDataAdapter _adapter;
 
         private global::System.Data.OleDb.OleDbConnection _connection;
@@ -7943,13 +7942,11 @@ namespace kp2_2.кп2_DataSetTableAdapters
 
         private bool _clearBeforeFill;
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public Справочник_катерогийTableAdapter()
         {
             this.ClearBeforeFill = true;
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter
@@ -7963,7 +7960,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
                 return this._adapter;
             }
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal global::System.Data.OleDb.OleDbConnection Connection
@@ -8001,7 +7997,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             }
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal global::System.Data.OleDb.OleDbTransaction Transaction
         {
@@ -8034,7 +8029,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             }
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected global::System.Data.OleDb.OleDbCommand[] CommandCollection
         {
@@ -8047,7 +8041,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
                 return this._commandCollection;
             }
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public bool ClearBeforeFill
@@ -8081,14 +8074,12 @@ namespace kp2_2.кп2_DataSetTableAdapters
             this._adapter.UpdateCommand.Connection = this.Connection;
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection()
         {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
             this._connection.ConnectionString = global::kp2_2.Properties.Settings.Default.kp2ConnectionString;
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection()
@@ -8638,7 +8629,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class Справочник_систем_проведенияTableAdapter : global::System.ComponentModel.Component
     {
-
         private global::System.Data.OleDb.OleDbDataAdapter _adapter;
 
         private global::System.Data.OleDb.OleDbConnection _connection;
@@ -8649,13 +8639,11 @@ namespace kp2_2.кп2_DataSetTableAdapters
 
         private bool _clearBeforeFill;
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public Справочник_систем_проведенияTableAdapter()
         {
             this.ClearBeforeFill = true;
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter
@@ -8669,7 +8657,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
                 return this._adapter;
             }
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal global::System.Data.OleDb.OleDbConnection Connection
@@ -8707,7 +8694,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             }
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal global::System.Data.OleDb.OleDbTransaction Transaction
         {
@@ -8740,7 +8726,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             }
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected global::System.Data.OleDb.OleDbCommand[] CommandCollection
         {
@@ -8753,7 +8738,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
                 return this._commandCollection;
             }
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public bool ClearBeforeFill
@@ -8768,7 +8752,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             }
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitAdapter()
         {
@@ -8782,32 +8765,11 @@ namespace kp2_2.кп2_DataSetTableAdapters
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Справочник систем проведения` WHERE ((`Код системы` = ?) AND ((? = 1" +
-                " AND `Название системы` IS NULL) OR (`Название системы` = ?)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Код_системы", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код системы", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Название_системы", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название системы", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Название_системы", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название системы", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Справочник систем проведения` (`Название системы`, `Описание системы" +
-                "`) VALUES (?, ?)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Название_системы", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название системы", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Описание_системы", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Описание системы", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `Справочник систем проведения` SET `Название системы` = ?, `Описание систе" +
-                "мы` = ? WHERE ((`Код системы` = ?) AND ((? = 1 AND `Название системы` IS NULL) O" +
-                "R (`Название системы` = ?)))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Название_системы", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название системы", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Описание_системы", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Описание системы", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Код_системы", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код системы", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Название_системы", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название системы", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Название_системы", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название системы", global::System.Data.DataRowVersion.Original, false, null));
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection()
@@ -8815,7 +8777,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             this._connection = new global::System.Data.OleDb.OleDbConnection();
             this._connection.ConnectionString = global::kp2_2.Properties.Settings.Default.kp2ConnectionString;
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection()
@@ -8827,7 +8788,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
                 "тем проведения]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
@@ -8843,7 +8803,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             return returnValue;
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
@@ -8855,7 +8814,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             return dataTable;
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(кп2_DataSet.Справочник_систем_проведенияDataTable dataTable)
@@ -8863,14 +8821,12 @@ namespace kp2_2.кп2_DataSetTableAdapters
             return this.Adapter.Update(dataTable);
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(кп2_DataSet dataSet)
         {
             return this.Adapter.Update(dataSet, "Справочник систем проведения");
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
@@ -8880,7 +8836,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
                         dataRow});
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows)
@@ -8888,134 +8843,79 @@ namespace kp2_2.кп2_DataSetTableAdapters
             return this.Adapter.Update(dataRows);
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Код_системы, string Original_Название_системы)
+        public virtual int Delete(string code)
         {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Код_системы));
-            if ((Original_Название_системы == null))
-            {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Название_системы));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open)
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Справочник систем проведения] WHERE [Код системы] = " + code;
+            global::System.Data.ConnectionState previousConnectionState = this._adapter.DeleteCommand.Connection.State;
+            if (((this._adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open)
                         != global::System.Data.ConnectionState.Open))
             {
-                this.Adapter.DeleteCommand.Connection.Open();
+                this._adapter.DeleteCommand.Connection.Open();
             }
             try
             {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                int returnValue = this._adapter.DeleteCommand.ExecuteNonQuery();
                 return returnValue;
             }
             finally
             {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed))
                 {
-                    this.Adapter.DeleteCommand.Connection.Close();
+                    this._adapter.DeleteCommand.Connection.Close();
                 }
             }
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Название_системы, string Описание_системы)
+        public virtual int Insert(string newelement)
         {
-            if ((Название_системы == null))
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Справочник систем проведения] VALUES (" + newelement + ")";
+            global::System.Data.ConnectionState previousConnectionState = this._adapter.InsertCommand.Connection.State;
+            if (((this._adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) != global::System.Data.ConnectionState.Open))
             {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Название_системы));
-            }
-            if ((Описание_системы == null))
-            {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Описание_системы));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open)
-                        != global::System.Data.ConnectionState.Open))
-            {
-                this.Adapter.InsertCommand.Connection.Open();
+                this._adapter.InsertCommand.Connection.Open();
             }
             try
             {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                int returnValue = this._adapter.InsertCommand.ExecuteNonQuery();
                 return returnValue;
             }
             finally
             {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed))
                 {
-                    this.Adapter.InsertCommand.Connection.Close();
+                    this._adapter.InsertCommand.Connection.Close();
                 }
             }
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Название_системы, string Описание_системы, int Original_Код_системы, string Original_Название_системы)
+        public virtual int Update(string newelement, string code)
         {
-            if ((Название_системы == null))
-            {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Название_системы));
-            }
-            if ((Описание_системы == null))
-            {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Описание_системы));
-            }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_Код_системы));
-            if ((Original_Название_системы == null))
-            {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Название_системы));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open)
+            this._adapter.UpdateCommand.CommandText = "UPDATE [Справочник систем проведения] SET " + newelement + " WHERE [Код системы] = " + code;
+            global::System.Data.ConnectionState previousConnectionState = this._adapter.UpdateCommand.Connection.State;
+            if (((this._adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open)
                         != global::System.Data.ConnectionState.Open))
             {
-                this.Adapter.UpdateCommand.Connection.Open();
+                this._adapter.UpdateCommand.Connection.Open();
             }
             try
             {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                int returnValue = this._adapter.UpdateCommand.ExecuteNonQuery();
                 return returnValue;
             }
             finally
             {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed))
                 {
-                    this.Adapter.UpdateCommand.Connection.Close();
+                    this._adapter.UpdateCommand.Connection.Close();
                 }
             }
         }

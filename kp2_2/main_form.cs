@@ -281,5 +281,14 @@ namespace kp2_2
             }
             else { }
         }
+        private void Catalog_system_MenuItem_Click(object sender, EventArgs e)
+        {
+            catalog_system_form novoeokno = new catalog_system_form();
+
+            if (novoeokno.ShowDialog(this) == DialogResult.OK)//новое окно catalog_system_form
+            {
+            }
+            else { }
+        }
     }
 }

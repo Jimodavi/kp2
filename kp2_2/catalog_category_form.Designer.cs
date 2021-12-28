@@ -54,7 +54,7 @@ namespace kp2_2
             this.Справочник_категорий_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Справочник_категорий_DataGridView.Location = new System.Drawing.Point(0, 0);
             this.Справочник_категорий_DataGridView.Name = "Справочник_категорий_DataGridView";
-            this.Справочник_категорий_DataGridView.Size = new System.Drawing.Size(494, 450);
+            this.Справочник_категорий_DataGridView.Size = new System.Drawing.Size(494, 361);
             this.Справочник_категорий_DataGridView.TabIndex = 0;
             this.Справочник_категорий_DataGridView.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.Справочник_категорий_DataGridView_CellBeginEdit);
             this.Справочник_категорий_DataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Справочник_категорий_DataGridView_CellEndEdit);
@@ -102,7 +102,7 @@ namespace kp2_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 450);
+            this.ClientSize = new System.Drawing.Size(494, 361);
             this.Controls.Add(this.Справочник_категорий_DataGridView);
             this.Name = "catalog_category_form";
             this.Text = "catalog_category_form";
