@@ -60,7 +60,6 @@ namespace kp2_2 {
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
-        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public кп2_DataSet() {
             this.BeginInit();
@@ -70,7 +69,6 @@ namespace kp2_2 {
             base.Relations.CollectionChanged += schemaChangedHandler;
             this.EndInit();
         }
-        
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected кп2_DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
@@ -131,26 +129,41 @@ namespace kp2_2 {
             this.Relations.CollectionChanged += schemaChangedHandler;
         }
         
-        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public int Next_DB_index(string codename, string tablename)
+        public int Next_DB_index(string columnname, string tablename)
         {
             System.Data.OleDb.OleDbCommand Command;
             Command = new global::System.Data.OleDb.OleDbCommand();
             System.Data.OleDb.OleDbConnection Connection;
             Connection = new global::System.Data.OleDb.OleDbConnection();
 
-            Command.CommandText = "SELECT MAX ([" + codename + "]) FROM [" + tablename + "]";
+            Command.CommandText = "SELECT MAX ([" + columnname + "]) FROM [" + tablename + "]";
             Command.Connection = Connection;
             Connection.ConnectionString = global::kp2_2.Properties.Settings.Default.kp2ConnectionString;
             Connection.Open();
-            //int index = (int)Command.ExecuteScalar();
             int index = Command.ExecuteScalar() == System.DBNull.Value ? 0 : (int)Command.ExecuteScalar();
             Connection.Close();
             return index + 1;
         }
+
+        /*public string DB_cell_value(string columnname, string tablename, string codecolumnname, string code)
+        {
+            System.Data.OleDb.OleDbCommand Command;
+            Command = new global::System.Data.OleDb.OleDbCommand();
+            System.Data.OleDb.OleDbConnection Connection;
+            Connection = new global::System.Data.OleDb.OleDbConnection();
+
+            Command.CommandText = "SELECT [" + columnname + "] FROM [" + tablename + "] WHERE [" + codecolumnname + "] = " + code;
+            Command.Connection = Connection;
+            Connection.ConnectionString = global::kp2_2.Properties.Settings.Default.kp2ConnectionString;
+            Connection.Open();
+            System.Data.OleDb.OleDbDataReader Reader = Command.ExecuteReader();
+            string result = (string)Reader[0];
+            Connection.Close();
+            return result;
+        }*/
         public РасписаниеDataTable Расписание {
             get {
                 return this.tableРасписание;
@@ -165,7 +178,6 @@ namespace kp2_2 {
                 return this.tableСетки;
             }
         }
-        
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
@@ -3465,8 +3477,8 @@ namespace kp2_2 {
                         Справочник_систем_проведенияRow parentСправочник_систем_проведенияRowByСправочник_систем_проведенияТурниры, 
                         int Количество_участников, 
                         string Разряд, 
-                        int Количество_групп, 
-                        string Дата_начала, 
+                        int Количество_групп,
+                        System.DateTime Дата_начала, 
                         System.DateTime Дата_конца, 
                         int Количество_кортов, 
                         Справочник_кортовRow parentСправочник_кортовRowByСправочник_кортовТурниры, 
@@ -3519,13 +3531,11 @@ namespace kp2_2 {
                 return rowТурнирыRow;
             }
             
-            
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ТурнирыRow FindByКод_турнира(int Код_турнира) {
                 return ((ТурнирыRow)(this.Rows.Find(new object[] {
                             Код_турнира})));
             }
-            
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
@@ -3534,12 +3544,10 @@ namespace kp2_2 {
                 return cln;
             }
             
-            
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
                 return new ТурнирыDataTable();
             }
-            
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
@@ -3581,7 +3589,7 @@ namespace kp2_2 {
                 base.Columns.Add(this.columnРазряд);
                 this.columnКоличество_групп = new global::System.Data.DataColumn("Количество групп", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnКоличество_групп);
-                this.columnДата_начала = new global::System.Data.DataColumn("Дата начала", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnДата_начала = new global::System.Data.DataColumn("Дата начала", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnДата_начала);
                 this.columnДата_конца = new global::System.Data.DataColumn("Дата конца", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnДата_конца);
@@ -3614,7 +3622,6 @@ namespace kp2_2 {
                 this.columnКод_турнира.Unique = true;
                 this.columnНаименование.MaxLength = 255;
                 this.columnРазряд.MaxLength = 255;
-                this.columnДата_начала.MaxLength = 255;
                 this.columnФИО_директора.MaxLength = 255;
                 this.columnТелефон_директора.MaxLength = 255;
             }
@@ -5005,13 +5012,11 @@ namespace kp2_2 {
             
             private ТурнирыDataTable tableТурниры;
             
-            
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal ТурнирыRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableТурниры = ((ТурнирыDataTable)(this.Table));
             }
-            
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int Код_турнира {
@@ -5022,7 +5027,6 @@ namespace kp2_2 {
                     this[this.tableТурниры.Код_турнираColumn] = value;
                 }
             }
-            
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Наименование {
@@ -5038,7 +5042,6 @@ namespace kp2_2 {
                     this[this.tableТурниры.НаименованиеColumn] = value;
                 }
             }
-            
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int Код_категории {
@@ -5070,7 +5073,6 @@ namespace kp2_2 {
                     this[this.tableТурниры.Код_системы_проведенияColumn] = value;
                 }
             }
-            
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int Количество_участников {
@@ -5121,10 +5123,10 @@ namespace kp2_2 {
             
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Дата_начала {
+            public System.DateTime Дата_начала {
                 get {
                     try {
-                        return ((string)(this[this.tableТурниры.Дата_началаColumn]));
+                        return ((global::System.DateTime)(this[this.tableТурниры.Дата_началаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Дата начала\' в таблице \'Турниры\' равно DBNull.", e);
@@ -5134,7 +5136,6 @@ namespace kp2_2 {
                     this[this.tableТурниры.Дата_началаColumn] = value;
                 }
             }
-            
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime Дата_конца {
@@ -5150,7 +5151,6 @@ namespace kp2_2 {
                     this[this.tableТурниры.Дата_концаColumn] = value;
                 }
             }
-            
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int Количество_кортов {
@@ -5926,7 +5926,6 @@ namespace kp2_2 {
 }
 namespace kp2_2.кп2_DataSetTableAdapters
 {
-
 
     /// <summary>
     ///Represents the connection and commands used to retrieve and save data.
@@ -7302,7 +7301,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class Справочник_игроковTableAdapter : global::System.ComponentModel.Component
     {
-
         private global::System.Data.OleDb.OleDbDataAdapter _adapter;
 
         private global::System.Data.OleDb.OleDbConnection _connection;
@@ -7313,13 +7311,11 @@ namespace kp2_2.кп2_DataSetTableAdapters
 
         private bool _clearBeforeFill;
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public Справочник_игроковTableAdapter()
         {
             this.ClearBeforeFill = true;
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter
@@ -7333,7 +7329,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
                 return this._adapter;
             }
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal global::System.Data.OleDb.OleDbConnection Connection
@@ -7371,7 +7366,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             }
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal global::System.Data.OleDb.OleDbTransaction Transaction
         {
@@ -7404,7 +7398,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             }
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected global::System.Data.OleDb.OleDbCommand[] CommandCollection
         {
@@ -7418,7 +7411,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             }
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public bool ClearBeforeFill
         {
@@ -7431,7 +7423,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
                 this._clearBeforeFill = value;
             }
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitAdapter()
@@ -7508,14 +7499,12 @@ namespace kp2_2.кп2_DataSetTableAdapters
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Рейтинг", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Рейтинг", global::System.Data.DataRowVersion.Original, false, null));
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection()
         {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
             this._connection.ConnectionString = global::kp2_2.Properties.Settings.Default.kp2ConnectionString;
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection()
@@ -7527,7 +7516,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
                 "елефон], Рейтинг FROM [Справочник игроков]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
@@ -7543,7 +7531,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             return returnValue;
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
@@ -7555,7 +7542,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             return dataTable;
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(кп2_DataSet.Справочник_игроковDataTable dataTable)
@@ -7563,14 +7549,12 @@ namespace kp2_2.кп2_DataSetTableAdapters
             return this.Adapter.Update(dataTable);
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(кп2_DataSet dataSet)
         {
             return this.Adapter.Update(dataSet, "Справочник игроков");
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
@@ -7580,14 +7564,12 @@ namespace kp2_2.кп2_DataSetTableAdapters
                         dataRow});
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows)
         {
             return this.Adapter.Update(dataRows);
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
@@ -7685,7 +7667,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             }
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
@@ -7766,7 +7747,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
                 }
             }
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]

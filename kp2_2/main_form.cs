@@ -149,7 +149,7 @@ namespace kp2_2
                             ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value = old_value;
                             return;
                         }
-                        if ((DateTime)((DataGridView)sender)[e.RowIndex, e.ColumnIndex - 1].Value >= datetimevalue)
+                        if ((DateTime)((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex - 1].Value >= datetimevalue)
                         {
                             MessageBox.Show("Дата конца должна быть позже даты начала", "Ошибка");
                             ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value = old_value;
@@ -207,7 +207,7 @@ namespace kp2_2
                         break;
                     case 18:/*Количество сеянных участников*/
                         intvalue = (int)((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-                        if ((intvalue < 0) || (intvalue > (int)((DataGridView)sender)[e.RowIndex, 4].Value))
+                        if ((intvalue < 0) || (intvalue > (int)((DataGridView)sender).Rows[e.RowIndex].Cells[4].Value))
                         {
                             MessageBox.Show("Недомустимое количество сеянных участников", "Ошибка");
                             ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value = old_value;
@@ -222,12 +222,12 @@ namespace kp2_2
                 newelement += "[" + кп2_DataSet.Tables["Турниры"].Columns[e.ColumnIndex].ColumnName + "] = ";
                 if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ValueType.Name != "String")
                 {
-                    if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ValueType.Name == "DateTime") newelement += "'" + ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].EditedFormattedValue.ToString() + "'";
+                    if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ValueType.Name == "DateTime") newelement += "'" + ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() + "'";
                     else newelement += ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
                 }
                 else
                 {
-                    newelement += "'" + ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].EditedFormattedValue.ToString() + "'";
+                    newelement += "'" + ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() + "'";
                 }
                 this.Турниры_TableAdapter.Update(newelement, code);
             }
@@ -286,6 +286,15 @@ namespace kp2_2
             catalog_system_form novoeokno = new catalog_system_form();
 
             if (novoeokno.ShowDialog(this) == DialogResult.OK)//новое окно catalog_system_form
+            {
+            }
+            else { }
+        }
+        private void Catalog_etap_MenuItem_Click(object sender, EventArgs e)
+        {
+            catalog_etap_form novoeokno = new catalog_etap_form();
+
+            if (novoeokno.ShowDialog(this) == DialogResult.OK)//новое окно catalog_etap_form
             {
             }
             else { }

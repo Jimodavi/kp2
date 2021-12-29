@@ -24,8 +24,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.main_menuStrip = new System.Windows.Forms.MenuStrip();
             this.Schedule_MenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Draws_MenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -144,6 +144,7 @@
             this.Catalog_etap_MenuItem.Name = "Catalog_etap_MenuItem";
             this.Catalog_etap_MenuItem.Size = new System.Drawing.Size(252, 22);
             this.Catalog_etap_MenuItem.Text = "Справочник этапов проведения";
+            this.Catalog_etap_MenuItem.Click += new System.EventHandler(this.Catalog_etap_MenuItem_Click);
             // 
             // Catalog_court_MenuItem
             // 
@@ -354,16 +355,16 @@
             // Время_начала_проведения_DataGridViewColumn
             // 
             this.Время_начала_проведения_DataGridViewColumn.DataPropertyName = "Время начала проведения";
-            dataGridViewCellStyle3.Format = "HH:mm";
-            this.Время_начала_проведения_DataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "HH:mm";
+            this.Время_начала_проведения_DataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.Время_начала_проведения_DataGridViewColumn.HeaderText = "Время начала проведения";
             this.Время_начала_проведения_DataGridViewColumn.Name = "Время_начала_проведения_DataGridViewColumn";
             // 
             // Время_конца_проведения_DataGridViewColumn
             // 
             this.Время_конца_проведения_DataGridViewColumn.DataPropertyName = "Время конца проведения";
-            dataGridViewCellStyle4.Format = "HH:mm";
-            this.Время_конца_проведения_DataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Format = "HH:mm";
+            this.Время_конца_проведения_DataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.Время_конца_проведения_DataGridViewColumn.HeaderText = "Время конца проведения";
             this.Время_конца_проведения_DataGridViewColumn.Name = "Время_конца_проведения_DataGridViewColumn";
             // 

@@ -28,7 +28,7 @@ namespace kp2_2
 
             /*выключение Visisble для поля [Код игрока 2]*/
             if (main_form.Row_ref.Cells[5].EditedFormattedValue.ToString().Contains("диночный"))
-                Списки_участников_DataGridView.Columns[3].Visible = false;
+            Списки_участников_DataGridView.Columns[3].Visible = false;
         }
         private void Списки_участников_DataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {

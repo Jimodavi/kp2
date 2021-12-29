@@ -71,7 +71,7 @@ namespace kp2_2
             string code = ((DataGridView)sender).Rows[e.RowIndex].Cells[0].Value.ToString();
             string newelement = "";
             newelement += "[" + кп2_DataSet.Tables["Справочник катерогий"].Columns[e.ColumnIndex].ColumnName + "] = ";
-            newelement += "'" + ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].EditedFormattedValue.ToString() + "'";
+            newelement += "'" + ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() + "'";
             this.Справочник_категорий_TableAdapter.Update(newelement, code);
         }
         private void Справочник_категорий_DataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
