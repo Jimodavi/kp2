@@ -13,3 +13,5 @@ D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.sc
 D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.list_participants_form.resources
 D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.catalog_category_form.resources
 D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.catalog_system_form.resources
+D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.catalog_court_form.resources
+D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.catalog_etap_form.resources

@@ -151,6 +151,7 @@
             this.Catalog_court_MenuItem.Name = "Catalog_court_MenuItem";
             this.Catalog_court_MenuItem.Size = new System.Drawing.Size(252, 22);
             this.Catalog_court_MenuItem.Text = "Справочник кортов";
+            this.Catalog_court_MenuItem.Click += new System.EventHandler(this.Catalog_court_MenuItem_Click);
             // 
             // Catalog_players_MenuItem
             // 
