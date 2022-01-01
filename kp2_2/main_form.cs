@@ -45,8 +45,15 @@ namespace kp2_2
                     for (int j = max_number_of_courts; j > (int)Турниры_DataGridView.Rows[i].Cells[9].Value; j--) Турниры_DataGridView.Rows[i].Cells[9 + j].ReadOnly = true;
                 }
                 catch (Exception) { for (int j = max_number_of_courts; j > 0; j--) Турниры_DataGridView.Rows[i].Cells[9 + j].ReadOnly = true; }
-                /*[Количество сеянных участников] доступно в зависимости от [Количество участников]*/
-                if (Турниры_DataGridView.Rows[i].Cells[4].Value == DBNull.Value) Турниры_DataGridView.Rows[i].Cells[18].ReadOnly = true;
+                /*[Количество сеянных участников] доступно в зависимости от [Код категории]*/
+                try
+                {
+                    if ((int)Турниры_DataGridView.Rows[i].Cells[3].Value == 2) Турниры_DataGridView.Rows[i].Cells[18].ReadOnly = true;
+                }
+                catch (Exception)
+                {
+                    Турниры_DataGridView.Rows[i].Cells[18].ReadOnly = true;
+                }
             }            
         }
         private void Турниры_DataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -104,24 +111,32 @@ namespace kp2_2
                 {                    
                     case 3:/*Код системы проведения*/
                         intvalue = (int)((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-                        if (intvalue == 3) ((DataGridView)sender).Rows[e.RowIndex].Cells[6].ReadOnly = false;
+                        if (intvalue == 2)
+                        {
+                            ((DataGridView)sender).Rows[e.RowIndex].Cells[6].ReadOnly = true;
+                            ((DataGridView)sender).Rows[e.RowIndex].Cells[6].Value = DBNull.Value;
+                            ((DataGridView)sender).Rows[e.RowIndex].Cells[18].ReadOnly = true;
+                            ((DataGridView)sender).Rows[e.RowIndex].Cells[18].Value = DBNull.Value;
+                        }
+                        else if (intvalue == 3) { 
+                            ((DataGridView)sender).Rows[e.RowIndex].Cells[6].ReadOnly = false;
+                            ((DataGridView)sender).Rows[e.RowIndex].Cells[18].ReadOnly = false;
+                        }
                         else
                         {
                             ((DataGridView)sender).Rows[e.RowIndex].Cells[6].ReadOnly = true;
                             ((DataGridView)sender).Rows[e.RowIndex].Cells[6].Value = DBNull.Value;
+                            ((DataGridView)sender).Rows[e.RowIndex].Cells[18].ReadOnly = false;
                         }
                         break;
                     case 4:/*Количество участников*/
                         intvalue = (int)((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
                         if ((intvalue < 2) || (intvalue > max_number_of_participants))
                         {
-                            ((DataGridView)sender).Rows[e.RowIndex].Cells[18].ReadOnly = true;
-                            ((DataGridView)sender).Rows[e.RowIndex].Cells[18].Value = DBNull.Value;
                             MessageBox.Show("Недомустимое количество участников", "Ошибка");
                             ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value = old_value;
                             return;
                         }
-                        ((DataGridView)sender).Rows[e.RowIndex].Cells[18].ReadOnly = false;
                         break;
                     case 6:/*Количество групп*/
                         intvalue = (int)((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
@@ -304,6 +319,15 @@ namespace kp2_2
             catalog_court_form novoeokno = new catalog_court_form();
 
             if (novoeokno.ShowDialog(this) == DialogResult.OK)//новое окно catalog_court_form
+            {
+            }
+            else { }
+        }
+        private void Catalog_players_MenuItem_Click(object sender, EventArgs e)
+        {
+            catalog_players_form novoeokno = new catalog_players_form();
+
+            if (novoeokno.ShowDialog(this) == DialogResult.OK)//новое окно catalog_players_form
             {
             }
             else { }

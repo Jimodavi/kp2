@@ -49,7 +49,7 @@ namespace kp2_2
         private void Списки_участников_DataGridView_UserAddedRow(object sender, DataGridViewRowEventArgs e)
         {
             /*добавление пустой строки в БД*/
-            ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value = кп2_DataSet.Next_DB_index("Код участника", "Списки участников");
+            ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value = кп2_DataSet.Next_DB_index("Код учаcтника", "Списки участников");
 
             ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[1].Value = code_tournament;
             string newelement = "";

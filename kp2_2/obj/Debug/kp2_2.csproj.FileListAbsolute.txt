@@ -15,3 +15,4 @@ D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.ca
 D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.catalog_system_form.resources
 D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.catalog_court_form.resources
 D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.catalog_etap_form.resources
+D:\Docs\вуз\Программирование\kursov2\kp2_2\obj\Debug\kp2_2.catalog_players_form.resources

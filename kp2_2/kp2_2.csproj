@@ -64,6 +64,12 @@
     <Compile Include="catalog_etap_form.Designer.cs">
       <DependentUpon>catalog_etap_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="catalog_players_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="catalog_players_form.Designer.cs">
+      <DependentUpon>catalog_players_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="catalog_system_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="catalog_etap_form.resx">
       <DependentUpon>catalog_etap_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="catalog_players_form.resx">
+      <DependentUpon>catalog_players_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="catalog_system_form.resx">
       <DependentUpon>catalog_system_form.cs</DependentUpon>

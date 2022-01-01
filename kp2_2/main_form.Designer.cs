@@ -158,6 +158,7 @@
             this.Catalog_players_MenuItem.Name = "Catalog_players_MenuItem";
             this.Catalog_players_MenuItem.Size = new System.Drawing.Size(252, 22);
             this.Catalog_players_MenuItem.Text = "Справочник игроков";
+            this.Catalog_players_MenuItem.Click += new System.EventHandler(this.Catalog_players_MenuItem_Click);
             // 
             // Турниры_DataGridView
             // 

@@ -120,7 +120,7 @@ namespace kp2_2
             // Время_начала_DataGridViewColumn
             // 
             this.Время_начала_DataGridViewColumn.DataPropertyName = "Время начала";
-            dataGridViewCellStyle1.Format = "dd.MM.yyyy - HH:mm";
+            dataGridViewCellStyle1.Format = "dd.MM.yyyy HH:mm";
             this.Время_начала_DataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.Время_начала_DataGridViewColumn.HeaderText = "Время начала";
             this.Время_начала_DataGridViewColumn.Name = "Время_начала_DataGridViewColumn";

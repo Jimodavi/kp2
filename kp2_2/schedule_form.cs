@@ -74,7 +74,7 @@ namespace kp2_2
             int intvalue;
             bool flag;
             DateTime datetimevalue;
-            string format_date_time = @"^[0-3][0-9].[0-1][0-9].[1-2][0-9][0-9][0-9] - [0-2][0-9]:[0-5][0-9]$";
+            string format_date_time = @"^[0-3][0-9].[0-1][0-9].[1-2][0-9][0-9][0-9] [0-2][0-9]:[0-5][0-9]$";
             try
             {                
                 switch (e.ColumnIndex)
@@ -98,7 +98,7 @@ namespace kp2_2
                         datetimevalue = (DateTime)((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
                         if (!Regex.IsMatch(((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].EditedFormattedValue.ToString(), format_date_time))
                         {
-                            MessageBox.Show("Дата вводится в формате \"дд.мм.гггг - чч.мм\"", "Ошибка");
+                            MessageBox.Show("Дата вводится в формате \"дд.мм.гггг чч.мм\"", "Ошибка");
                             ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value = old_value;
                             return;
                         }
