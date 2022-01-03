@@ -31,22 +31,24 @@ namespace kp2_2
         {
             this.components = new System.ComponentModel.Container();
             this.Справочник_этапов_турнира_DataGridView = new System.Windows.Forms.DataGridView();
-            this.кп2_DataSet = new kp2_2.кп2_DataSet();
-            this.Справочник_этапов_турнира_BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Справочник_этапов_турнира_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.Справочник_этапов_турнираTableAdapter();
-            this.Справочник_систем_проведения_BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Справочник_систем_проведения_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.Справочник_систем_проведенияTableAdapter();
             this.Код_этапа_DataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Этап_DataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Код_системы_проведения_DataGridViewColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Справочник_систем_проведения_BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.кп2_DataSet = new kp2_2.кп2_DataSet();
+            this.Справочник_этапов_турнира_BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Справочник_этапов_турнира_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.Справочник_этапов_турнираTableAdapter();
+            this.Справочник_систем_проведения_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.Справочник_систем_проведенияTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.Справочник_этапов_турнира_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Справочник_систем_проведения_BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.кп2_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Справочник_этапов_турнира_BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Справочник_систем_проведения_BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Справочник_этапов_турнира_DataGridView
             // 
+            this.Справочник_этапов_турнира_DataGridView.AllowUserToAddRows = false;
+            this.Справочник_этапов_турнира_DataGridView.AllowUserToDeleteRows = false;
             this.Справочник_этапов_турнира_DataGridView.AutoGenerateColumns = false;
             this.Справочник_этапов_турнира_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Справочник_этапов_турнира_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -60,29 +62,6 @@ namespace kp2_2
             this.Справочник_этапов_турнира_DataGridView.ReadOnly = true;
             this.Справочник_этапов_турнира_DataGridView.Size = new System.Drawing.Size(414, 361);
             this.Справочник_этапов_турнира_DataGridView.TabIndex = 0;
-            // 
-            // кп2_DataSet
-            // 
-            this.кп2_DataSet.DataSetName = "кп2_DataSet";
-            this.кп2_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Справочник_этапов_турнира_BindingSource
-            // 
-            this.Справочник_этапов_турнира_BindingSource.DataMember = "Справочник этапов турнира";
-            this.Справочник_этапов_турнира_BindingSource.DataSource = this.кп2_DataSet;
-            // 
-            // Справочник_этапов_турнира_TableAdapter
-            // 
-            this.Справочник_этапов_турнира_TableAdapter.ClearBeforeFill = true;
-            // 
-            // Справочник_систем_проведения_BindingSource
-            // 
-            this.Справочник_систем_проведения_BindingSource.DataMember = "Справочник систем проведения";
-            this.Справочник_систем_проведения_BindingSource.DataSource = this.кп2_DataSet;
-            // 
-            // Справочник_систем_проведения_TableAdapter
-            // 
-            this.Справочник_систем_проведения_TableAdapter.ClearBeforeFill = true;
             // 
             // Код_этапа_DataGridViewColumn
             // 
@@ -112,6 +91,29 @@ namespace kp2_2
             this.Код_системы_проведения_DataGridViewColumn.ValueMember = "Код системы";
             this.Код_системы_проведения_DataGridViewColumn.Width = 180;
             // 
+            // Справочник_систем_проведения_BindingSource
+            // 
+            this.Справочник_систем_проведения_BindingSource.DataMember = "Справочник систем проведения";
+            this.Справочник_систем_проведения_BindingSource.DataSource = this.кп2_DataSet;
+            // 
+            // кп2_DataSet
+            // 
+            this.кп2_DataSet.DataSetName = "кп2_DataSet";
+            this.кп2_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // Справочник_этапов_турнира_BindingSource
+            // 
+            this.Справочник_этапов_турнира_BindingSource.DataMember = "Справочник этапов турнира";
+            this.Справочник_этапов_турнира_BindingSource.DataSource = this.кп2_DataSet;
+            // 
+            // Справочник_этапов_турнира_TableAdapter
+            // 
+            this.Справочник_этапов_турнира_TableAdapter.ClearBeforeFill = true;
+            // 
+            // Справочник_систем_проведения_TableAdapter
+            // 
+            this.Справочник_систем_проведения_TableAdapter.ClearBeforeFill = true;
+            // 
             // catalog_etap_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,9 +124,9 @@ namespace kp2_2
             this.Text = "catalog_etap_form";
             this.Load += new System.EventHandler(this.catalog_etap_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Справочник_этапов_турнира_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Справочник_систем_проведения_BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.кп2_DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Справочник_этапов_турнира_BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Справочник_систем_проведения_BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

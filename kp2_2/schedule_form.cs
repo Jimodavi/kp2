@@ -24,48 +24,14 @@ namespace kp2_2
         private void schedule_form_Load(object sender, EventArgs e)
         {
             /*загрузка данных кп2_DataSet*/
+            this.Сетки_TableAdapter.Fill(this.кп2_DataSet.Сетки, code_tournament.ToString());
             this.Справочник_кортов_TableAdapter.Fill(this.кп2_DataSet.Справочник_кортов);
             this.Расписание_TableAdapter.Fill(this.кп2_DataSet.Расписание, code_tournament.ToString());
-            this.Расписание_TableAdapter.Fill(this.кп2_DataSet.Расписание, code_tournament.ToString());
-        }
-        private void Расписание_DataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            /*удаление строки правой кнопкой мыши*/
-            if (e.Button == MouseButtons.Right)
-                if (MessageBox.Show("Удалить матч?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    string code = ((DataGridView)sender).Rows[e.RowIndex].Cells[0].Value.ToString();
-                    this.Расписание_TableAdapter.Delete(code);
-                    ((DataGridView)sender).Rows.RemoveAt(e.RowIndex);
-                }
         }
         private void Расписание_DataGridView_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             /*сохранение прежнего значения клетки для отмены изменений*/
             old_value = ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-        }
-        private void Расписание_DataGridView_UserAddedRow(object sender, DataGridViewRowEventArgs e)
-        {
-            /*добавление пустой строки в БД*/
-            ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value = кп2_DataSet.Next_DB_index("Код матча", "Расписание");
-            ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[1].Value = code_tournament;
-            string newelement = "";
-            newelement += ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value.ToString();
-            newelement += ", " + ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[1].Value.ToString();
-            for (int i = 2; i < 4; i++)
-            {
-                newelement += ", ";
-                if (((DataGridView)sender).Rows[e.Row.Index - 1].Cells[i].ValueType.Name != "String")
-                {
-                    newelement += "null";
-
-                }
-                else
-                {
-                    newelement += "''";
-                }
-            }
-            this.Расписание_TableAdapter.Insert(newelement);
         }
         private void Расписание_DataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
@@ -121,6 +87,70 @@ namespace kp2_2
             }
         }
         private void Расписание_DataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show("Неправильный ввод", "Ошибка");
+            return;
+        }
+        private void Сетки_DataGridView_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            /*сохранение прежнего значения клетки для отмены изменений*/
+            old_value = ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+        }
+        private void Сетки_DataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {            
+            /*проверка ввода*/
+            if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value == DBNull.Value) return;
+            int intvalue;
+            string stringvalue;
+            string format_score = @"^[0-9]/[0-9]$";
+            try
+            {
+                switch (e.ColumnIndex)
+                {
+                    case 6:
+                    case 7:
+                    case 8:/*Счёт сета*/
+                        stringvalue = ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                        if (!Regex.IsMatch(((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].EditedFormattedValue.ToString(), format_score))
+                        {
+                            MessageBox.Show("Счёт вводится в формате \"<количество выигранных геймов участника 1>/<количество выигранных геймов участника 2>\"", "Ошибка");
+                            ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value = old_value;
+                            return;
+                        }
+                        break;
+                    case 9:/*Победитель*/
+                        intvalue = (int)((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+                        if ((intvalue < 1) || (intvalue > 2))
+                        {
+                            MessageBox.Show("Победитель либо 1ый либо 2ой участник", "Ошибка");
+                            ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value = old_value;
+                            return;
+                        }
+                        break;
+                }
+
+                /*запрос в БД*/
+                string code = ((DataGridView)sender).Rows[e.RowIndex].Cells[0].Value.ToString();
+                string newelement = "";
+                newelement += "[" + кп2_DataSet.Tables["Сетки"].Columns[e.ColumnIndex-2].ColumnName + "] = ";
+                if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].ValueType.Name != "String")
+                {
+                    newelement += ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                }
+                else
+                {
+                    newelement += "'" + ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() + "'";
+                }
+                this.Сетки_TableAdapter.Update(newelement, code);
+            }
+            catch (Exception exeption)
+            {
+                MessageBox.Show(exeption.Message, "Ошибка");
+                ((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value = old_value;
+                return;
+            }
+        }
+        private void Сетки_DataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             MessageBox.Show("Неправильный ввод", "Ошибка");
             return;

@@ -31,12 +31,12 @@ namespace kp2_2
         {
             this.components = new System.ComponentModel.Container();
             this.Справочник_систем_проведения_DataGridView = new System.Windows.Forms.DataGridView();
-            this.Код_системы_DataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Название_системы_DataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Описание_системы_DataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Справочник_систем_проведения_BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.кп2_DataSet = new kp2_2.кп2_DataSet();
             this.Справочник_систем_проведения_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.Справочник_систем_проведенияTableAdapter();
+            this.Код_системы_DataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Название_системы_DataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Описание_системы_DataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Справочник_систем_проведения_DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Справочник_систем_проведения_BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.кп2_DataSet)).BeginInit();
@@ -44,6 +44,8 @@ namespace kp2_2
             // 
             // Справочник_систем_проведения_DataGridView
             // 
+            this.Справочник_систем_проведения_DataGridView.AllowUserToAddRows = false;
+            this.Справочник_систем_проведения_DataGridView.AllowUserToDeleteRows = false;
             this.Справочник_систем_проведения_DataGridView.AutoGenerateColumns = false;
             this.Справочник_систем_проведения_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Справочник_систем_проведения_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -56,32 +58,8 @@ namespace kp2_2
             this.Справочник_систем_проведения_DataGridView.Name = "Справочник_систем_проведения_DataGridView";
             this.Справочник_систем_проведения_DataGridView.Size = new System.Drawing.Size(483, 361);
             this.Справочник_систем_проведения_DataGridView.TabIndex = 0;
-            this.Справочник_систем_проведения_DataGridView.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.Справочник_систем_проведения_DataGridView_CellBeginEdit);
             this.Справочник_систем_проведения_DataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Справочник_систем_проведения_DataGridView_CellEndEdit);
-            this.Справочник_систем_проведения_DataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Справочник_систем_проведения_DataGridView_CellMouseClick);
             this.Справочник_систем_проведения_DataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Справочник_систем_проведения_DataGridView_DataError);
-            this.Справочник_систем_проведения_DataGridView.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.Справочник_систем_проведения_DataGridView_UserAddedRow);
-            // 
-            // Код_системы_DataGridViewColumn
-            // 
-            this.Код_системы_DataGridViewColumn.DataPropertyName = "Код системы";
-            this.Код_системы_DataGridViewColumn.HeaderText = "Код системы";
-            this.Код_системы_DataGridViewColumn.Name = "Код_системы_DataGridViewColumn";
-            this.Код_системы_DataGridViewColumn.ReadOnly = true;
-            // 
-            // Название_системы_DataGridViewColumn
-            // 
-            this.Название_системы_DataGridViewColumn.DataPropertyName = "Название системы";
-            this.Название_системы_DataGridViewColumn.HeaderText = "Название системы";
-            this.Название_системы_DataGridViewColumn.Name = "Название_системы_DataGridViewColumn";
-            this.Название_системы_DataGridViewColumn.Width = 140;
-            // 
-            // Описание_системы_DataGridViewColumn
-            // 
-            this.Описание_системы_DataGridViewColumn.DataPropertyName = "Описание системы";
-            this.Описание_системы_DataGridViewColumn.HeaderText = "Описание системы";
-            this.Описание_системы_DataGridViewColumn.Name = "Описание_системы_DataGridViewColumn";
-            this.Описание_системы_DataGridViewColumn.Width = 200;
             // 
             // Справочник_систем_проведения_BindingSource
             // 
@@ -96,6 +74,28 @@ namespace kp2_2
             // Справочник_систем_проведения_TableAdapter
             // 
             this.Справочник_систем_проведения_TableAdapter.ClearBeforeFill = true;
+            // 
+            // Код_системы_DataGridViewColumn
+            // 
+            this.Код_системы_DataGridViewColumn.DataPropertyName = "Код системы";
+            this.Код_системы_DataGridViewColumn.HeaderText = "Код системы";
+            this.Код_системы_DataGridViewColumn.Name = "Код_системы_DataGridViewColumn";
+            this.Код_системы_DataGridViewColumn.ReadOnly = true;
+            // 
+            // Название_системы_DataGridViewColumn
+            // 
+            this.Название_системы_DataGridViewColumn.DataPropertyName = "Название системы";
+            this.Название_системы_DataGridViewColumn.HeaderText = "Название системы";
+            this.Название_системы_DataGridViewColumn.Name = "Название_системы_DataGridViewColumn";
+            this.Название_системы_DataGridViewColumn.ReadOnly = true;
+            this.Название_системы_DataGridViewColumn.Width = 140;
+            // 
+            // Описание_системы_DataGridViewColumn
+            // 
+            this.Описание_системы_DataGridViewColumn.DataPropertyName = "Описание системы";
+            this.Описание_системы_DataGridViewColumn.HeaderText = "Описание системы";
+            this.Описание_системы_DataGridViewColumn.Name = "Описание_системы_DataGridViewColumn";
+            this.Описание_системы_DataGridViewColumn.Width = 200;
             // 
             // catalog_system_form
             // 

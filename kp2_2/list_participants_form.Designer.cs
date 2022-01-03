@@ -89,7 +89,8 @@ namespace kp2_2
             this.Код_игрока1_DataGridViewColumn.DataPropertyName = "Код игрока 1";
             this.Код_игрока1_DataGridViewColumn.DataSource = this.Справочник_игроков_BindingSource1;
             this.Код_игрока1_DataGridViewColumn.DisplayMember = "Фамилия";
-            this.Код_игрока1_DataGridViewColumn.HeaderText = "Код игрока 1";
+            this.Код_игрока1_DataGridViewColumn.DisplayStyleForCurrentCellOnly = true;
+            this.Код_игрока1_DataGridViewColumn.HeaderText = "Игрок 1";
             this.Код_игрока1_DataGridViewColumn.Name = "Код_игрока1_DataGridViewColumn";
             this.Код_игрока1_DataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Код_игрока1_DataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -111,7 +112,8 @@ namespace kp2_2
             this.Код_игрока2_DataGridViewColumn.DataPropertyName = "Код игрока 2";
             this.Код_игрока2_DataGridViewColumn.DataSource = this.Справочник_игроков_BindingSource2;
             this.Код_игрока2_DataGridViewColumn.DisplayMember = "Фамилия";
-            this.Код_игрока2_DataGridViewColumn.HeaderText = "Код игрока 2";
+            this.Код_игрока2_DataGridViewColumn.DisplayStyleForCurrentCellOnly = true;
+            this.Код_игрока2_DataGridViewColumn.HeaderText = "Игрок 2";
             this.Код_игрока2_DataGridViewColumn.Name = "Код_игрока2_DataGridViewColumn";
             this.Код_игрока2_DataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Код_игрока2_DataGridViewColumn.ValueMember = "Код игрока";

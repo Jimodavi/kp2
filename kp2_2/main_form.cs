@@ -279,6 +279,11 @@ namespace kp2_2
                 MessageBox.Show("Выберите 1 турнир", "Ошибка");
                 return;
             }
+            if (Турниры_DataGridView.SelectedRows[0].Cells[4].Value == DBNull.Value)
+            {
+                MessageBox.Show("Введите количество участников", "Ошибка");
+                return;
+            }
             list_participants_form novoeokno = new list_participants_form((int)(Турниры_DataGridView.SelectedRows[0].Cells[0].Value));
             Row_ref = Турниры_DataGridView.SelectedRows[0];
 

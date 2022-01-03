@@ -5956,7 +5956,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             this.ClearBeforeFill = true;
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter
         {
@@ -5969,7 +5968,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
                 return this._adapter;
             }
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal global::System.Data.OleDb.OleDbConnection Connection
@@ -6040,7 +6038,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             }
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected global::System.Data.OleDb.OleDbCommand[] CommandCollection
         {
@@ -6054,7 +6051,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             }
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public bool ClearBeforeFill
         {
@@ -6067,7 +6063,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
                 this._clearBeforeFill = value;
             }
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitAdapter()
@@ -6277,7 +6272,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             this.ClearBeforeFill = true;
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter
         {
@@ -6290,7 +6284,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
                 return this._adapter;
             }
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal global::System.Data.OleDb.OleDbConnection Connection
@@ -6328,7 +6321,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             }
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal global::System.Data.OleDb.OleDbTransaction Transaction
         {
@@ -6361,7 +6353,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             }
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected global::System.Data.OleDb.OleDbCommand[] CommandCollection
         {
@@ -6375,7 +6366,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             }
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public bool ClearBeforeFill
         {
@@ -6388,7 +6378,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
                 this._clearBeforeFill = value;
             }
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitAdapter()
@@ -6410,76 +6399,11 @@ namespace kp2_2.кп2_DataSetTableAdapters
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Сетки` WHERE ((`Код матча` = ?) AND ((? = 1 AND `Код турнира` IS NULL) OR (`Код турнира` = ?)) AND ((? = 1 AND `Код участника 1` IS NULL) OR (`Код участника 1` = ?)) AND ((? = 1 AND `Код участника 2` IS NULL) OR (`Код участника 2` = ?)) AND ((? = 1 AND `Счёт первого сета` IS NULL) OR (`Счёт первого сета` = ?)) AND ((? = 1 AND `Счёт второго сета` IS NULL) OR (`Счёт второго сета` = ?)) AND ((? = 1 AND `Счёт третьего сета` IS NULL) OR (`Счёт третьего сета` = ?)) AND ((? = 1 AND `Победитель` IS NULL) OR (`Победитель` = ?)) AND ((? = 1 AND `Этап` IS NULL) OR (`Этап` = ?)) AND ((? = 1 AND `Место` IS NULL) OR (`Место` = ?)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Код_матча", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код матча", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Код_турнира", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код турнира", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Код_турнира", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код турнира", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Код_участника_1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код участника 1", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Код_участника_1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код участника 1", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Код_участника_2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код участника 2", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Код_участника_2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код участника 2", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Счёт_первого_сета", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт первого сета", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Счёт_первого_сета", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт первого сета", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Счёт_второго_сета", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт второго сета", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Счёт_второго_сета", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт второго сета", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Счёт_третьего_сета", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт третьего сета", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Счёт_третьего_сета", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт третьего сета", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Победитель", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Победитель", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Победитель", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Победитель", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Этап", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Этап", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Этап", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Этап", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Место", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Место", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Место", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Место", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Сетки` (`Код турнира`, `Код участника 1`, `Код участника 2`, `Счёт п" +
-                "ервого сета`, `Счёт второго сета`, `Счёт третьего сета`, `Победитель`, `Этап`, `" +
-                "Место`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Код_турнира", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код турнира", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Код_участника_1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код участника 1", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Код_участника_2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код участника 2", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Счёт_первого_сета", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт первого сета", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Счёт_второго_сета", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт второго сета", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Счёт_третьего_сета", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт третьего сета", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Победитель", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Победитель", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Этап", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Этап", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Место", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Место", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Сетки` SET `Код турнира` = ?, `Код участника 1` = ?, `Код участника 2` = ?, `Счёт первого сета` = ?, `Счёт второго сета` = ?, `Счёт третьего сета` = ?, `Победитель` = ?, `Этап` = ?, `Место` = ? WHERE ((`Код матча` = ?) AND ((? = 1 AND `Код турнира` IS NULL) OR (`Код турнира` = ?)) AND ((? = 1 AND `Код участника 1` IS NULL) OR (`Код участника 1` = ?)) AND ((? = 1 AND `Код участника 2` IS NULL) OR (`Код участника 2` = ?)) AND ((? = 1 AND `Счёт первого сета` IS NULL) OR (`Счёт первого сета` = ?)) AND ((? = 1 AND `Счёт второго сета` IS NULL) OR (`Счёт второго сета` = ?)) AND ((? = 1 AND `Счёт третьего сета` IS NULL) OR (`Счёт третьего сета` = ?)) AND ((? = 1 AND `Победитель` IS NULL) OR (`Победитель` = ?)) AND ((? = 1 AND `Этап` IS NULL) OR (`Этап` = ?)) AND ((? = 1 AND `Место` IS NULL) OR (`Место` = ?)))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Код_турнира", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код турнира", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Код_участника_1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код участника 1", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Код_участника_2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код участника 2", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Счёт_первого_сета", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт первого сета", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Счёт_второго_сета", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт второго сета", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Счёт_третьего_сета", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт третьего сета", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Победитель", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Победитель", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Этап", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Этап", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Место", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Место", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Код_матча", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код матча", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Код_турнира", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код турнира", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Код_турнира", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код турнира", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Код_участника_1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код участника 1", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Код_участника_1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код участника 1", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Код_участника_2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код участника 2", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Код_участника_2", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код участника 2", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Счёт_первого_сета", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт первого сета", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Счёт_первого_сета", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт первого сета", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Счёт_второго_сета", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт второго сета", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Счёт_второго_сета", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт второго сета", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Счёт_третьего_сета", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт третьего сета", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Счёт_третьего_сета", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Счёт третьего сета", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Победитель", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Победитель", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Победитель", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Победитель", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Этап", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Этап", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Этап", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Этап", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Место", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Место", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Место", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Место", global::System.Data.DataRowVersion.Original, false, null));
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection()
@@ -6487,7 +6411,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             this._connection = new global::System.Data.OleDb.OleDbConnection();
             this._connection.ConnectionString = global::kp2_2.Properties.Settings.Default.kp2ConnectionString;
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection()
@@ -6497,17 +6420,17 @@ namespace kp2_2.кп2_DataSetTableAdapters
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT [Код матча], [Код турнира], [Код участника 1], [Код участника 2], [Счёт пе" +
                 "рвого сета], [Счёт второго сета], [Счёт третьего сета], Победитель, Этап, Место " +
-                "FROM Сетки";
+                "FROM Сетки WHERE [Код турнира] = ***** ORDER BY [Место]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(кп2_DataSet.СеткиDataTable dataTable)
+        public virtual int Fill(кп2_DataSet.СеткиDataTable dataTable, string code)
         {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.CommandText = this.Adapter.SelectCommand.CommandText.Replace("*****", code);
             if ((this.ClearBeforeFill == true))
             {
                 dataTable.Clear();
@@ -6515,7 +6438,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             int returnValue = this.Adapter.Fill(dataTable);
             return returnValue;
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
@@ -6528,7 +6450,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             return dataTable;
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(кп2_DataSet.СеткиDataTable dataTable)
@@ -6536,14 +6457,12 @@ namespace kp2_2.кп2_DataSetTableAdapters
             return this.Adapter.Update(dataTable);
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(кп2_DataSet dataSet)
         {
             return this.Adapter.Update(dataSet, "Сетки");
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
@@ -6561,425 +6480,79 @@ namespace kp2_2.кп2_DataSetTableAdapters
             return this.Adapter.Update(dataRows);
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Код_матча, global::System.Nullable<int> Original_Код_турнира, global::System.Nullable<int> Original_Код_участника_1, global::System.Nullable<int> Original_Код_участника_2, string Original_Счёт_первого_сета, string Original_Счёт_второго_сета, string Original_Счёт_третьего_сета, global::System.Nullable<int> Original_Победитель, global::System.Nullable<int> Original_Этап, global::System.Nullable<int> Original_Место)
+        public virtual int Delete(string code)
         {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Код_матча));
-            if ((Original_Код_турнира.HasValue == true))
-            {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Код_турнира.Value));
-            }
-            else
-            {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Код_участника_1.HasValue == true))
-            {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Код_участника_1.Value));
-            }
-            else
-            {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Код_участника_2.HasValue == true))
-            {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_Код_участника_2.Value));
-            }
-            else
-            {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Счёт_первого_сета == null))
-            {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Счёт_первого_сета));
-            }
-            if ((Original_Счёт_второго_сета == null))
-            {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Счёт_второго_сета));
-            }
-            if ((Original_Счёт_третьего_сета == null))
-            {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Счёт_третьего_сета));
-            }
-            if ((Original_Победитель.HasValue == true))
-            {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_Победитель.Value));
-            }
-            else
-            {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Этап.HasValue == true))
-            {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_Этап.Value));
-            }
-            else
-            {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Место.HasValue == true))
-            {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_Место.Value));
-            }
-            else
-            {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open)
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Сетки] WHERE [Код матча] = " + code;
+            global::System.Data.ConnectionState previousConnectionState = this._adapter.DeleteCommand.Connection.State;
+            if (((this._adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open)
                         != global::System.Data.ConnectionState.Open))
             {
-                this.Adapter.DeleteCommand.Connection.Open();
+                this._adapter.DeleteCommand.Connection.Open();
             }
             try
             {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                int returnValue = this._adapter.DeleteCommand.ExecuteNonQuery();
                 return returnValue;
             }
             finally
             {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed))
                 {
-                    this.Adapter.DeleteCommand.Connection.Close();
+                    this._adapter.DeleteCommand.Connection.Close();
                 }
             }
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> Код_турнира, global::System.Nullable<int> Код_участника_1, global::System.Nullable<int> Код_участника_2, string Счёт_первого_сета, string Счёт_второго_сета, string Счёт_третьего_сета, global::System.Nullable<int> Победитель, global::System.Nullable<int> Этап, global::System.Nullable<int> Место)
+        public virtual int Insert(string newelement)
         {
-            if ((Код_турнира.HasValue == true))
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Сетки] VALUES (" + newelement + ")";
+            global::System.Data.ConnectionState previousConnectionState = this._adapter.InsertCommand.Connection.State;
+            if (((this._adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) != global::System.Data.ConnectionState.Open))
             {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Код_турнира.Value));
-            }
-            else
-            {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((Код_участника_1.HasValue == true))
-            {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Код_участника_1.Value));
-            }
-            else
-            {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Код_участника_2.HasValue == true))
-            {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Код_участника_2.Value));
-            }
-            else
-            {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((Счёт_первого_сета == null))
-            {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Счёт_первого_сета));
-            }
-            if ((Счёт_второго_сета == null))
-            {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Счёт_второго_сета));
-            }
-            if ((Счёт_третьего_сета == null))
-            {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Счёт_третьего_сета));
-            }
-            if ((Победитель.HasValue == true))
-            {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(Победитель.Value));
-            }
-            else
-            {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((Этап.HasValue == true))
-            {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Этап.Value));
-            }
-            else
-            {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Место.HasValue == true))
-            {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(Место.Value));
-            }
-            else
-            {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open)
-                        != global::System.Data.ConnectionState.Open))
-            {
-                this.Adapter.InsertCommand.Connection.Open();
+                this._adapter.InsertCommand.Connection.Open();
             }
             try
             {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                int returnValue = this._adapter.InsertCommand.ExecuteNonQuery();
                 return returnValue;
             }
             finally
             {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed))
                 {
-                    this.Adapter.InsertCommand.Connection.Close();
+                    this._adapter.InsertCommand.Connection.Close();
                 }
             }
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    global::System.Nullable<int> Код_турнира,
-                    global::System.Nullable<int> Код_участника_1,
-                    global::System.Nullable<int> Код_участника_2,
-                    string Счёт_первого_сета,
-                    string Счёт_второго_сета,
-                    string Счёт_третьего_сета,
-                    global::System.Nullable<int> Победитель,
-                    global::System.Nullable<int> Этап,
-                    global::System.Nullable<int> Место,
-                    int Original_Код_матча,
-                    global::System.Nullable<int> Original_Код_турнира,
-                    global::System.Nullable<int> Original_Код_участника_1,
-                    global::System.Nullable<int> Original_Код_участника_2,
-                    string Original_Счёт_первого_сета,
-                    string Original_Счёт_второго_сета,
-                    string Original_Счёт_третьего_сета,
-                    global::System.Nullable<int> Original_Победитель,
-                    global::System.Nullable<int> Original_Этап,
-                    global::System.Nullable<int> Original_Место)
+        public virtual int Update(string newelement, string code)
         {
-            if ((Код_турнира.HasValue == true))
-            {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Код_турнира.Value));
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((Код_участника_1.HasValue == true))
-            {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Код_участника_1.Value));
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Код_участника_2.HasValue == true))
-            {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Код_участника_2.Value));
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((Счёт_первого_сета == null))
-            {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Счёт_первого_сета));
-            }
-            if ((Счёт_второго_сета == null))
-            {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Счёт_второго_сета));
-            }
-            if ((Счёт_третьего_сета == null))
-            {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Счёт_третьего_сета));
-            }
-            if ((Победитель.HasValue == true))
-            {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Победитель.Value));
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((Этап.HasValue == true))
-            {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Этап.Value));
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Место.HasValue == true))
-            {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Место.Value));
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Код_матча));
-            if ((Original_Код_турнира.HasValue == true))
-            {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Код_турнира.Value));
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Код_участника_1.HasValue == true))
-            {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_Код_участника_1.Value));
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Код_участника_2.HasValue == true))
-            {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_Код_участника_2.Value));
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Счёт_первого_сета == null))
-            {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Счёт_первого_сета));
-            }
-            if ((Original_Счёт_второго_сета == null))
-            {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Счёт_второго_сета));
-            }
-            if ((Original_Счёт_третьего_сета == null))
-            {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Счёт_третьего_сета));
-            }
-            if ((Original_Победитель.HasValue == true))
-            {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_Победитель.Value));
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Этап.HasValue == true))
-            {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_Этап.Value));
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Место.HasValue == true))
-            {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(Original_Место.Value));
-            }
-            else
-            {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open)
+            this._adapter.UpdateCommand.CommandText = "UPDATE [Сетки] SET " + newelement + " WHERE [Код матча] = " + code;
+            global::System.Data.ConnectionState previousConnectionState = this._adapter.UpdateCommand.Connection.State;
+            if (((this._adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open)
                         != global::System.Data.ConnectionState.Open))
             {
-                this.Adapter.UpdateCommand.Connection.Open();
+                this._adapter.UpdateCommand.Connection.Open();
             }
             try
             {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                int returnValue = this._adapter.UpdateCommand.ExecuteNonQuery();
                 return returnValue;
             }
             finally
             {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed))
                 {
-                    this.Adapter.UpdateCommand.Connection.Close();
+                    this._adapter.UpdateCommand.Connection.Close();
                 }
             }
         }
@@ -7217,7 +6790,7 @@ namespace kp2_2.кп2_DataSetTableAdapters
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
         public virtual int Delete(string code)
         {
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Списки участников] WHERE [Код участника] = " + code;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Списки участников] WHERE [Код учаcтника] = " + code;
             global::System.Data.ConnectionState previousConnectionState = this._adapter.DeleteCommand.Connection.State;
             if (((this._adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open)
                         != global::System.Data.ConnectionState.Open))
@@ -7268,7 +6841,7 @@ namespace kp2_2.кп2_DataSetTableAdapters
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string newelement, string code)
         {
-            this._adapter.UpdateCommand.CommandText = "UPDATE [Списки участников] SET " + newelement + " WHERE [Код участника] = " + code;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [Списки участников] SET " + newelement + " WHERE [Код учаcтника] = " + code;
             global::System.Data.ConnectionState previousConnectionState = this._adapter.UpdateCommand.Connection.State;
             if (((this._adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open)
                         != global::System.Data.ConnectionState.Open))

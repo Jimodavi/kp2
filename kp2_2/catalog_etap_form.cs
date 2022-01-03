@@ -12,7 +12,6 @@ namespace kp2_2
 {
     public partial class catalog_etap_form : Form
     {
-        private object old_value;
         public catalog_etap_form()
         {
             InitializeComponent();

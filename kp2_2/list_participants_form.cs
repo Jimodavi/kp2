@@ -48,6 +48,12 @@ namespace kp2_2
         }
         private void Списки_участников_DataGridView_UserAddedRow(object sender, DataGridViewRowEventArgs e)
         {
+            /*не добавлять строки, если достигнуто количество участников*/
+            if ((Списки_участников_DataGridView.RowCount - 2) == (int)main_form.Row_ref.Cells[4].Value) {
+                ((DataGridView)sender).Rows.RemoveAt(e.Row.Index - 1);
+                MessageBox.Show("Достигнуто количество участников", "Ошибка");
+                return;
+            }
             /*добавление пустой строки в БД*/
             ((DataGridView)sender).Rows[e.Row.Index - 1].Cells[0].Value = кп2_DataSet.Next_DB_index("Код учаcтника", "Списки участников");
 
@@ -68,12 +74,13 @@ namespace kp2_2
                     newelement += "''";
                 }
             }
+
             this.Cписки_участников_TableAdapter.Insert(newelement);
         }
         private void Списки_участников_DataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             /*проверка ввода*/
-            if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value == DBNull.Value) return;
+            if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value == null) return;
             object objectvalue;
             bool flag;
             try
