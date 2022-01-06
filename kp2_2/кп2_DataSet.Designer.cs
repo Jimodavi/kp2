@@ -148,22 +148,30 @@ namespace kp2_2 {
             return index + 1;
         }
 
-        /*public string DB_cell_value(string columnname, string tablename, string codecolumnname, string code)
+        public string DB_cell_value(string columnname, string tablename, string codecolumnname, string code)
         {
-            System.Data.OleDb.OleDbCommand Command;
-            Command = new global::System.Data.OleDb.OleDbCommand();
-            System.Data.OleDb.OleDbConnection Connection;
-            Connection = new global::System.Data.OleDb.OleDbConnection();
-
-            Command.CommandText = "SELECT [" + columnname + "] FROM [" + tablename + "] WHERE [" + codecolumnname + "] = " + code;
-            Command.Connection = Connection;
-            Connection.ConnectionString = global::kp2_2.Properties.Settings.Default.kp2ConnectionString;
-            Connection.Open();
-            System.Data.OleDb.OleDbDataReader Reader = Command.ExecuteReader();
-            string result = (string)Reader[0];
-            Connection.Close();
-            return result;
-        }*/
+            try
+            {
+                System.Data.OleDb.OleDbCommand Command;
+                Command = new global::System.Data.OleDb.OleDbCommand();
+                System.Data.OleDb.OleDbConnection Connection;
+                Connection = new global::System.Data.OleDb.OleDbConnection();
+                Command.CommandText = "SELECT [" + columnname + "] FROM [" + tablename + "] WHERE [" + codecolumnname + "] = " + code;
+                Command.Connection = Connection;
+                Connection.ConnectionString = global::kp2_2.Properties.Settings.Default.kp2ConnectionString;
+                Connection.Open();
+                System.Data.OleDb.OleDbDataReader Reader = Command.ExecuteReader();
+                Reader.Read();
+                string result = Reader[0].ToString();
+                Reader.Close();
+                Connection.Close();
+                return result;
+            }catch(System.Exception e)
+            {
+                System.Windows.Forms.MessageBox.Show(e.Message, "Ошибка");
+                return "";
+            }
+        }
         public РасписаниеDataTable Расписание {
             get {
                 return this.tableРасписание;
@@ -198,7 +206,6 @@ namespace kp2_2 {
             }
         }
         
-        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
@@ -207,7 +214,6 @@ namespace kp2_2 {
                 return this.tableСправочник_катерогий;
             }
         }
-        
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
@@ -218,7 +224,6 @@ namespace kp2_2 {
             }
         }
         
-        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
@@ -227,7 +232,6 @@ namespace kp2_2 {
                 return this.tableСправочник_систем_проведения;
             }
         }
-        
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
@@ -238,7 +242,6 @@ namespace kp2_2 {
             }
         }
         
-        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
@@ -247,7 +250,6 @@ namespace kp2_2 {
                 return this.tableТурниры;
             }
         }
-        
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
@@ -261,7 +263,6 @@ namespace kp2_2 {
             }
         }
         
-        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public new global::System.Data.DataTableCollection Tables {
@@ -269,7 +270,6 @@ namespace kp2_2 {
                 return base.Tables;
             }
         }
-        
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
@@ -279,14 +279,12 @@ namespace kp2_2 {
             }
         }
         
-        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected override void InitializeDerivedDataSet() {
             this.BeginInit();
             this.InitClass();
             this.EndInit();
         }
-        
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
@@ -296,18 +294,15 @@ namespace kp2_2 {
             return cln;
         }
         
-        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected override bool ShouldSerializeTables() {
             return false;
         }
         
-        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected override bool ShouldSerializeRelations() {
             return false;
         }
-        
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected override void ReadXmlSerializable(global::System.Xml.XmlReader reader) {
@@ -357,7 +352,6 @@ namespace kp2_2 {
             }
         }
         
-        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected override global::System.Xml.Schema.XmlSchema GetSchemaSerializable() {
             global::System.IO.MemoryStream stream = new global::System.IO.MemoryStream();
@@ -366,12 +360,10 @@ namespace kp2_2 {
             return global::System.Xml.Schema.XmlSchema.Read(new global::System.Xml.XmlTextReader(stream), null);
         }
         
-        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars() {
             this.InitVars(true);
         }
-        
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
@@ -443,7 +435,6 @@ namespace kp2_2 {
             this.relationСправочник_кортовТурниры2 = this.Relations["Справочник кортовТурниры2"];
             this.relationСправочник_систем_проведенияТурниры = this.Relations["Справочник систем проведенияТурниры"];
         }
-        
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
@@ -524,60 +515,50 @@ namespace kp2_2 {
             this.Relations.Add(this.relationСправочник_систем_проведенияТурниры);
         }
         
-        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeРасписание() {
             return false;
         }
-        
-        
+       
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeСетки() {
             return false;
         }
-        
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeСписки_участников() {
             return false;
         }
         
-        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeСправочник_игроков() {
             return false;
         }
-        
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeСправочник_катерогий() {
             return false;
         }
         
-        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeСправочник_кортов() {
             return false;
         }
-        
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeСправочник_систем_проведения() {
             return false;
         }
         
-        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeСправочник_этапов_турнира() {
             return false;
         }
         
-        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeТурниры() {
             return false;
         }
-        
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
@@ -585,7 +566,6 @@ namespace kp2_2 {
                 this.InitVars();
             }
         }
-        
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {

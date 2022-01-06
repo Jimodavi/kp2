@@ -100,7 +100,7 @@ namespace kp2_2
         private void Турниры_DataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             /*проверка ввода и включение ReadOnly для некоторых клеток*/
-            if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value == DBNull.Value) return;
+            if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value.Equals(DBNull.Value)) return;
             int intvalue;
             DateTime datetimevalue;
             string format_date = @"^[0-3][0-9].[0-1][0-9].[1-2][0-9][0-9][0-9]$";
@@ -268,6 +268,21 @@ namespace kp2_2
             Row_ref = Турниры_DataGridView.SelectedRows[0];
 
             if (novoeokno.ShowDialog(this) == DialogResult.OK)//новое окно schedule_form
+            {
+            }
+            else { }
+        }
+        private void Draws_MenuItem_Click(object sender, EventArgs e)
+        {
+            if (Турниры_DataGridView.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Выберите 1 турнир", "Ошибка");
+                return;
+            }
+            draws_form novoeokno = new draws_form((int)(Турниры_DataGridView.SelectedRows[0].Cells[0].Value));
+            Row_ref = Турниры_DataGridView.SelectedRows[0];
+
+            if (novoeokno.ShowDialog(this) == DialogResult.OK)//новое окно draws_form
             {
             }
             else { }

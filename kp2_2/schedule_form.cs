@@ -27,6 +27,39 @@ namespace kp2_2
             this.Сетки_TableAdapter.Fill(this.кп2_DataSet.Сетки, code_tournament.ToString());
             this.Справочник_кортов_TableAdapter.Fill(this.кп2_DataSet.Справочник_кортов);
             this.Расписание_TableAdapter.Fill(this.кп2_DataSet.Расписание, code_tournament.ToString());
+
+            /*заполнение колонок участник 1 и участник 2*/
+            for (int i = 0; i < Сетки_DataGridView.RowCount; i++)
+            {
+                string code_participant = Сетки_DataGridView.Rows[i].Cells[4].Value.ToString();
+                string code_player = кп2_DataSet.DB_cell_value("Код игрока 1", "Списки участников", "Код учаcтника", code_participant);
+                string name_player;
+                if (code_player != "")
+                {
+                    name_player = кп2_DataSet.DB_cell_value("Фамилия", "Справочник игроков", "Код игрока", code_player);
+                    Сетки_DataGridView.Rows[i].Cells[2].Value = name_player;
+                }
+                code_player = кп2_DataSet.DB_cell_value("Код игрока 2", "Списки участников", "Код учаcтника", code_participant);
+                if (code_player != "")
+                {
+                    name_player = кп2_DataSet.DB_cell_value("Фамилия", "Справочник игроков", "Код игрока", code_player);
+                    Сетки_DataGridView.Rows[i].Cells[2].Value += "/" + name_player;
+                }
+
+                code_participant = Сетки_DataGridView.Rows[i].Cells[5].Value.ToString();
+                code_player = кп2_DataSet.DB_cell_value("Код игрока 1", "Списки участников", "Код учаcтника", code_participant);
+                if (code_player != "")
+                {
+                    name_player = кп2_DataSet.DB_cell_value("Фамилия", "Справочник игроков", "Код игрока", code_player);
+                    Сетки_DataGridView.Rows[i].Cells[3].Value = name_player;
+                }
+                code_player = кп2_DataSet.DB_cell_value("Код игрока 2", "Списки участников", "Код учаcтника", code_participant);
+                if (code_player != "")
+                {
+                    name_player = кп2_DataSet.DB_cell_value("Фамилия", "Справочник игроков", "Код игрока", code_player);
+                    Сетки_DataGridView.Rows[i].Cells[3].Value += "/" + name_player;
+                }
+            }
         }
         private void Расписание_DataGridView_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
@@ -155,5 +188,6 @@ namespace kp2_2
             MessageBox.Show("Неправильный ввод", "Ошибка");
             return;
         }
+        
     }
 }

@@ -105,6 +105,7 @@
             this.Draws_MenuItem.Name = "Draws_MenuItem";
             this.Draws_MenuItem.Size = new System.Drawing.Size(50, 20);
             this.Draws_MenuItem.Text = "Сетка";
+            this.Draws_MenuItem.Click += new System.EventHandler(this.Draws_MenuItem_Click);
             // 
             // List_participants_MenuItem
             // 

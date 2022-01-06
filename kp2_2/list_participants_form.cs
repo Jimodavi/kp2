@@ -14,6 +14,7 @@ namespace kp2_2
     {
         private int code_tournament;
         private object old_value;
+        private bool row_deleted = false;
         public list_participants_form(int code_tournament)
         {
             InitializeComponent();
@@ -50,6 +51,7 @@ namespace kp2_2
         {
             /*не добавлять строки, если достигнуто количество участников*/
             if ((Списки_участников_DataGridView.RowCount - 2) == (int)main_form.Row_ref.Cells[4].Value) {
+                row_deleted = true;
                 ((DataGridView)sender).Rows.RemoveAt(e.Row.Index - 1);
                 MessageBox.Show("Достигнуто количество участников", "Ошибка");
                 return;
@@ -80,7 +82,11 @@ namespace kp2_2
         private void Списки_участников_DataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             /*проверка ввода*/
-            if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value == null) return;
+            if (row_deleted) {
+                row_deleted = false;
+                return; }
+            if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value.Equals(DBNull.Value)) return;
+
             object objectvalue;
             bool flag;
             try
@@ -94,8 +100,11 @@ namespace kp2_2
                         flag = false;
                         for (int i = 0; (i < Списки_участников_DataGridView.RowCount - 1) && (!flag); i++)
                         {
-                            if (Списки_участников_DataGridView.Rows[i].Cells[2].Value == objectvalue) flag = true;
-                            if (Списки_участников_DataGridView.Rows[i].Cells[3].Value == objectvalue) flag = true;
+                            for (int j = 2; j <= 3; j++)
+                            {
+                                if ((e.RowIndex == i) && (e.ColumnIndex == j)) continue;
+                                if (objectvalue.Equals(Списки_участников_DataGridView.Rows[i].Cells[j].Value)) flag = true;
+                            }
                         }
                         if (flag)
                         {

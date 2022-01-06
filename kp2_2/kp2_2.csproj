@@ -76,6 +76,12 @@
     <Compile Include="catalog_system_form.Designer.cs">
       <DependentUpon>catalog_system_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="draws_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="draws_form.Designer.cs">
+      <DependentUpon>draws_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="list_participants_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="catalog_system_form.resx">
       <DependentUpon>catalog_system_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="draws_form.resx">
+      <DependentUpon>draws_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="list_participants_form.resx">
       <DependentUpon>list_participants_form.cs</DependentUpon>

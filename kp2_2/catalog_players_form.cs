@@ -65,7 +65,7 @@ namespace kp2_2
         private void Справочник_игроков_DataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             /*проверка ввода*/
-            if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value == DBNull.Value) return;
+            if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value.Equals(DBNull.Value)) return;
             int intvalue;
             DateTime datetimevalue;
             string format_date = @"^[0-3][0-9].[0-1][0-9].[1-2][0-9][0-9][0-9]$";

@@ -64,7 +64,7 @@ namespace kp2_2
         private void Справочник_кортов_DataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             /*проверка ввода*/
-            if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value == DBNull.Value) return;
+            if (((DataGridView)sender).Rows[e.RowIndex].Cells[e.ColumnIndex].Value.Equals(DBNull.Value)) return;
 
             /*запрос в БД*/
             string code = ((DataGridView)sender).Rows[e.RowIndex].Cells[0].Value.ToString();
