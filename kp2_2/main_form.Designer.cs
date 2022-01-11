@@ -24,8 +24,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.main_menuStrip = new System.Windows.Forms.MenuStrip();
             this.Schedule_MenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Draws_MenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,6 +84,7 @@
             // 
             // main_menuStrip
             // 
+            this.main_menuStrip.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.main_menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Schedule_MenuItem,
             this.Draws_MenuItem,
@@ -89,28 +92,28 @@
             this.Catalogs_MenuItem});
             this.main_menuStrip.Location = new System.Drawing.Point(0, 0);
             this.main_menuStrip.Name = "main_menuStrip";
-            this.main_menuStrip.Size = new System.Drawing.Size(1274, 24);
+            this.main_menuStrip.Size = new System.Drawing.Size(1274, 25);
             this.main_menuStrip.TabIndex = 0;
             this.main_menuStrip.Text = "menuStrip1";
             // 
             // Schedule_MenuItem
             // 
             this.Schedule_MenuItem.Name = "Schedule_MenuItem";
-            this.Schedule_MenuItem.Size = new System.Drawing.Size(84, 20);
-            this.Schedule_MenuItem.Text = "Расписание";
+            this.Schedule_MenuItem.Size = new System.Drawing.Size(62, 21);
+            this.Schedule_MenuItem.Text = "Матчи";
             this.Schedule_MenuItem.Click += new System.EventHandler(this.Schedule_MenuItem_Click);
             // 
             // Draws_MenuItem
             // 
             this.Draws_MenuItem.Name = "Draws_MenuItem";
-            this.Draws_MenuItem.Size = new System.Drawing.Size(50, 20);
+            this.Draws_MenuItem.Size = new System.Drawing.Size(61, 21);
             this.Draws_MenuItem.Text = "Сетка";
             this.Draws_MenuItem.Click += new System.EventHandler(this.Draws_MenuItem_Click);
             // 
             // List_participants_MenuItem
             // 
             this.List_participants_MenuItem.Name = "List_participants_MenuItem";
-            this.List_participants_MenuItem.Size = new System.Drawing.Size(77, 20);
+            this.List_participants_MenuItem.Size = new System.Drawing.Size(92, 21);
             this.List_participants_MenuItem.Text = "Участники";
             this.List_participants_MenuItem.Click += new System.EventHandler(this.List_participants_MenuItem_Click);
             // 
@@ -123,47 +126,56 @@
             this.Catalog_court_MenuItem,
             this.Catalog_players_MenuItem});
             this.Catalogs_MenuItem.Name = "Catalogs_MenuItem";
-            this.Catalogs_MenuItem.Size = new System.Drawing.Size(94, 20);
+            this.Catalogs_MenuItem.Size = new System.Drawing.Size(110, 21);
             this.Catalogs_MenuItem.Text = "Справочники";
             // 
             // Catalog_category_MenuItem
             // 
             this.Catalog_category_MenuItem.Name = "Catalog_category_MenuItem";
-            this.Catalog_category_MenuItem.Size = new System.Drawing.Size(252, 22);
+            this.Catalog_category_MenuItem.Size = new System.Drawing.Size(296, 22);
             this.Catalog_category_MenuItem.Text = "Справочник категорий";
             this.Catalog_category_MenuItem.Click += new System.EventHandler(this.Catalog_category_MenuItem_Click);
             // 
             // Catalog_system_MenuItem
             // 
             this.Catalog_system_MenuItem.Name = "Catalog_system_MenuItem";
-            this.Catalog_system_MenuItem.Size = new System.Drawing.Size(252, 22);
+            this.Catalog_system_MenuItem.Size = new System.Drawing.Size(296, 22);
             this.Catalog_system_MenuItem.Text = "Справочник систем проведения";
             this.Catalog_system_MenuItem.Click += new System.EventHandler(this.Catalog_system_MenuItem_Click);
             // 
             // Catalog_etap_MenuItem
             // 
             this.Catalog_etap_MenuItem.Name = "Catalog_etap_MenuItem";
-            this.Catalog_etap_MenuItem.Size = new System.Drawing.Size(252, 22);
+            this.Catalog_etap_MenuItem.Size = new System.Drawing.Size(296, 22);
             this.Catalog_etap_MenuItem.Text = "Справочник этапов проведения";
             this.Catalog_etap_MenuItem.Click += new System.EventHandler(this.Catalog_etap_MenuItem_Click);
             // 
             // Catalog_court_MenuItem
             // 
             this.Catalog_court_MenuItem.Name = "Catalog_court_MenuItem";
-            this.Catalog_court_MenuItem.Size = new System.Drawing.Size(252, 22);
+            this.Catalog_court_MenuItem.Size = new System.Drawing.Size(296, 22);
             this.Catalog_court_MenuItem.Text = "Справочник кортов";
             this.Catalog_court_MenuItem.Click += new System.EventHandler(this.Catalog_court_MenuItem_Click);
             // 
             // Catalog_players_MenuItem
             // 
             this.Catalog_players_MenuItem.Name = "Catalog_players_MenuItem";
-            this.Catalog_players_MenuItem.Size = new System.Drawing.Size(252, 22);
+            this.Catalog_players_MenuItem.Size = new System.Drawing.Size(296, 22);
             this.Catalog_players_MenuItem.Text = "Справочник игроков";
             this.Catalog_players_MenuItem.Click += new System.EventHandler(this.Catalog_players_MenuItem_Click);
             // 
             // Турниры_DataGridView
             // 
             this.Турниры_DataGridView.AutoGenerateColumns = false;
+            this.Турниры_DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Турниры_DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.Турниры_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Турниры_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Код_турнира_DataGridViewColumn,
@@ -186,12 +198,20 @@
             this.Телефон_директора_DataGridViewColumn,
             this.Количество_сеянных_участников_DataGridViewColumn});
             this.Турниры_DataGridView.DataSource = this.Турниры_BindingSource;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Турниры_DataGridView.DefaultCellStyle = dataGridViewCellStyle8;
             this.Турниры_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Турниры_DataGridView.Location = new System.Drawing.Point(0, 24);
+            this.Турниры_DataGridView.Location = new System.Drawing.Point(0, 25);
             this.Турниры_DataGridView.Name = "Турниры_DataGridView";
             this.Турниры_DataGridView.ShowCellErrors = false;
             this.Турниры_DataGridView.ShowRowErrors = false;
-            this.Турниры_DataGridView.Size = new System.Drawing.Size(1274, 337);
+            this.Турниры_DataGridView.Size = new System.Drawing.Size(1274, 336);
             this.Турниры_DataGridView.TabIndex = 1;
             this.Турниры_DataGridView.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.Турниры_DataGridView_CellBeginEdit);
             this.Турниры_DataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Турниры_DataGridView_CellEndEdit);
@@ -205,12 +225,14 @@
             this.Код_турнира_DataGridViewColumn.HeaderText = "Код турнира";
             this.Код_турнира_DataGridViewColumn.Name = "Код_турнира_DataGridViewColumn";
             this.Код_турнира_DataGridViewColumn.ReadOnly = true;
+            this.Код_турнира_DataGridViewColumn.Width = 107;
             // 
             // Наименование_DataGridViewColumn
             // 
             this.Наименование_DataGridViewColumn.DataPropertyName = "Наименование";
             this.Наименование_DataGridViewColumn.HeaderText = "Наименование турнира";
             this.Наименование_DataGridViewColumn.Name = "Наименование_DataGridViewColumn";
+            this.Наименование_DataGridViewColumn.Width = 174;
             // 
             // Код_категории_DataGridViewColumn
             // 
@@ -223,7 +245,7 @@
             this.Код_категории_DataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Код_категории_DataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Код_категории_DataGridViewColumn.ValueMember = "Код категории";
-            this.Код_категории_DataGridViewColumn.Width = 63;
+            this.Код_категории_DataGridViewColumn.Width = 102;
             // 
             // Справочник_катерогий_BindingSource
             // 
@@ -251,7 +273,7 @@
             this.Код_системы_проведения_DataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Код_системы_проведения_DataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Код_системы_проведения_DataGridViewColumn.ValueMember = "Код системы";
-            this.Код_системы_проведения_DataGridViewColumn.Width = 110;
+            this.Код_системы_проведения_DataGridViewColumn.Width = 162;
             // 
             // Справочник_систем_проведения_BindingSource
             // 
@@ -263,6 +285,7 @@
             this.Количество_участников_DataGridViewColumn.DataPropertyName = "Количество участников";
             this.Количество_участников_DataGridViewColumn.HeaderText = "Количество участников";
             this.Количество_участников_DataGridViewColumn.Name = "Количество_участников_DataGridViewColumn";
+            this.Количество_участников_DataGridViewColumn.Width = 177;
             // 
             // Разряд_DataGridViewColumn
             // 
@@ -278,31 +301,35 @@
             this.Разряд_DataGridViewColumn.Name = "Разряд_DataGridViewColumn";
             this.Разряд_DataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Разряд_DataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Разряд_DataGridViewColumn.Width = 115;
+            this.Разряд_DataGridViewColumn.Width = 83;
             // 
             // Количество_групп_DataGridViewColumn
             // 
             this.Количество_групп_DataGridViewColumn.DataPropertyName = "Количество групп";
             this.Количество_групп_DataGridViewColumn.HeaderText = "Количество групп";
             this.Количество_групп_DataGridViewColumn.Name = "Количество_групп_DataGridViewColumn";
+            this.Количество_групп_DataGridViewColumn.Width = 140;
             // 
             // Дата_начала_DataGridViewColumn
             // 
             this.Дата_начала_DataGridViewColumn.DataPropertyName = "Дата начала";
             this.Дата_начала_DataGridViewColumn.HeaderText = "Дата начала";
             this.Дата_начала_DataGridViewColumn.Name = "Дата_начала_DataGridViewColumn";
+            this.Дата_начала_DataGridViewColumn.Width = 108;
             // 
             // Дата_конца_DataGridViewColumn
             // 
             this.Дата_конца_DataGridViewColumn.DataPropertyName = "Дата конца";
             this.Дата_конца_DataGridViewColumn.HeaderText = "Дата конца";
             this.Дата_конца_DataGridViewColumn.Name = "Дата_конца_DataGridViewColumn";
+            this.Дата_конца_DataGridViewColumn.Width = 101;
             // 
             // Количество_кортов_DataGridViewColumn
             // 
             this.Количество_кортов_DataGridViewColumn.DataPropertyName = "Количество кортов";
             this.Количество_кортов_DataGridViewColumn.HeaderText = "Количество кортов";
             this.Количество_кортов_DataGridViewColumn.Name = "Количество_кортов_DataGridViewColumn";
+            this.Количество_кортов_DataGridViewColumn.Width = 149;
             // 
             // Код_корта_DataGridViewColumn1
             // 
@@ -315,6 +342,7 @@
             this.Код_корта_DataGridViewColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Код_корта_DataGridViewColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Код_корта_DataGridViewColumn1.ValueMember = "Код корта";
+            this.Код_корта_DataGridViewColumn1.Width = 139;
             // 
             // Справочник_кортов_BindingSource1
             // 
@@ -332,6 +360,7 @@
             this.Код_корта_DataGridViewColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Код_корта_DataGridViewColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Код_корта_DataGridViewColumn2.ValueMember = "Код корта";
+            this.Код_корта_DataGridViewColumn2.Width = 139;
             // 
             // Справочник_кортов_BindingSource2
             // 
@@ -349,6 +378,7 @@
             this.Код_корта_DataGridViewColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Код_корта_DataGridViewColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Код_корта_DataGridViewColumn3.ValueMember = "Код корта";
+            this.Код_корта_DataGridViewColumn3.Width = 139;
             // 
             // Справочник_кортов_BindingSource3
             // 
@@ -358,42 +388,48 @@
             // Время_начала_проведения_DataGridViewColumn
             // 
             this.Время_начала_проведения_DataGridViewColumn.DataPropertyName = "Время начала проведения";
-            dataGridViewCellStyle1.Format = "HH:mm";
-            this.Время_начала_проведения_DataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Format = "HH:mm";
+            this.Время_начала_проведения_DataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.Время_начала_проведения_DataGridViewColumn.HeaderText = "Время начала проведения";
             this.Время_начала_проведения_DataGridViewColumn.Name = "Время_начала_проведения_DataGridViewColumn";
+            this.Время_начала_проведения_DataGridViewColumn.Width = 195;
             // 
             // Время_конца_проведения_DataGridViewColumn
             // 
             this.Время_конца_проведения_DataGridViewColumn.DataPropertyName = "Время конца проведения";
-            dataGridViewCellStyle2.Format = "HH:mm";
-            this.Время_конца_проведения_DataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Format = "HH:mm";
+            this.Время_конца_проведения_DataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.Время_конца_проведения_DataGridViewColumn.HeaderText = "Время конца проведения";
             this.Время_конца_проведения_DataGridViewColumn.Name = "Время_конца_проведения_DataGridViewColumn";
+            this.Время_конца_проведения_DataGridViewColumn.Width = 187;
             // 
             // Длительность_матча_DataGridViewColumn
             // 
             this.Длительность_матча_DataGridViewColumn.DataPropertyName = "Длительность матча";
             this.Длительность_матча_DataGridViewColumn.HeaderText = "Длительность матча";
             this.Длительность_матча_DataGridViewColumn.Name = "Длительность_матча_DataGridViewColumn";
+            this.Длительность_матча_DataGridViewColumn.Width = 159;
             // 
             // ФИО_директора_DataGridViewColumn
             // 
             this.ФИО_директора_DataGridViewColumn.DataPropertyName = "ФИО директора";
             this.ФИО_директора_DataGridViewColumn.HeaderText = "ФИО директора";
             this.ФИО_директора_DataGridViewColumn.Name = "ФИО_директора_DataGridViewColumn";
+            this.ФИО_директора_DataGridViewColumn.Width = 130;
             // 
             // Телефон_директора_DataGridViewColumn
             // 
             this.Телефон_директора_DataGridViewColumn.DataPropertyName = "Телефон директора";
             this.Телефон_директора_DataGridViewColumn.HeaderText = "Телефон директора";
             this.Телефон_директора_DataGridViewColumn.Name = "Телефон_директора_DataGridViewColumn";
+            this.Телефон_директора_DataGridViewColumn.Width = 152;
             // 
             // Количество_сеянных_участников_DataGridViewColumn
             // 
             this.Количество_сеянных_участников_DataGridViewColumn.DataPropertyName = "Количество сеянных участников";
             this.Количество_сеянных_участников_DataGridViewColumn.HeaderText = "Количество сеянных участников";
             this.Количество_сеянных_участников_DataGridViewColumn.Name = "Количество_сеянных_участников_DataGridViewColumn";
+            this.Количество_сеянных_участников_DataGridViewColumn.Width = 232;
             // 
             // Турниры_BindingSource
             // 
@@ -425,7 +461,6 @@
             this.Controls.Add(this.main_menuStrip);
             this.MainMenuStrip = this.main_menuStrip;
             this.Name = "main_form";
-            this.Text = "main_form";
             this.Load += new System.EventHandler(this.main_form_Load);
             this.main_menuStrip.ResumeLayout(false);
             this.main_menuStrip.PerformLayout();

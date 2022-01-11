@@ -45,6 +45,7 @@ namespace kp2_2
             // Справочник_кортов_DataGridView
             // 
             this.Справочник_кортов_DataGridView.AutoGenerateColumns = false;
+            this.Справочник_кортов_DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.Справочник_кортов_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Справочник_кортов_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Код_корта_DataGridViewColumn,
@@ -53,8 +54,9 @@ namespace kp2_2
             this.Справочник_кортов_DataGridView.DataSource = this.Справочник_кортов_BindingSource;
             this.Справочник_кортов_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Справочник_кортов_DataGridView.Location = new System.Drawing.Point(0, 0);
+            this.Справочник_кортов_DataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Справочник_кортов_DataGridView.Name = "Справочник_кортов_DataGridView";
-            this.Справочник_кортов_DataGridView.Size = new System.Drawing.Size(394, 361);
+            this.Справочник_кортов_DataGridView.Size = new System.Drawing.Size(525, 472);
             this.Справочник_кортов_DataGridView.TabIndex = 0;
             this.Справочник_кортов_DataGridView.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.Справочник_кортов_DataGridView_CellBeginEdit);
             this.Справочник_кортов_DataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Справочник_кортов_DataGridView_CellEndEdit);
@@ -68,21 +70,21 @@ namespace kp2_2
             this.Код_корта_DataGridViewColumn.HeaderText = "Код корта";
             this.Код_корта_DataGridViewColumn.Name = "Код_корта_DataGridViewColumn";
             this.Код_корта_DataGridViewColumn.ReadOnly = true;
-            this.Код_корта_DataGridViewColumn.Width = 90;
+            this.Код_корта_DataGridViewColumn.Width = 93;
             // 
             // Название_корта_DataGridViewColumn
             // 
             this.Название_корта_DataGridViewColumn.DataPropertyName = "Название корта";
             this.Название_корта_DataGridViewColumn.HeaderText = "Название корта";
             this.Название_корта_DataGridViewColumn.Name = "Название_корта_DataGridViewColumn";
-            this.Название_корта_DataGridViewColumn.Width = 120;
+            this.Название_корта_DataGridViewColumn.Width = 128;
             // 
             // Расположение_корта_DataGridViewColumn
             // 
             this.Расположение_корта_DataGridViewColumn.DataPropertyName = "Расположение корта";
             this.Расположение_корта_DataGridViewColumn.HeaderText = "Расположение корта";
             this.Расположение_корта_DataGridViewColumn.Name = "Расположение_корта_DataGridViewColumn";
-            this.Расположение_корта_DataGridViewColumn.Width = 140;
+            this.Расположение_корта_DataGridViewColumn.Width = 159;
             // 
             // Справочник_кортов_BindingSource
             // 
@@ -100,10 +102,12 @@ namespace kp2_2
             // 
             // catalog_court_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 361);
+            this.ClientSize = new System.Drawing.Size(525, 472);
             this.Controls.Add(this.Справочник_кортов_DataGridView);
+            this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "catalog_court_form";
             this.Text = "catalog_court_form";
             this.Load += new System.EventHandler(this.catalog_court_form_Load);

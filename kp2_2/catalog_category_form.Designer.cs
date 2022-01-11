@@ -31,12 +31,12 @@ namespace kp2_2
         {
             this.components = new System.ComponentModel.Container();
             this.Справочник_категорий_DataGridView = new System.Windows.Forms.DataGridView();
-            this.Справочник_категорий_BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.кп2_DataSet = new kp2_2.кп2_DataSet();
-            this.Справочник_категорий_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.Справочник_катерогийTableAdapter();
             this.Код_категории_DataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Название_категории_DataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Описание_категории_DataGridViewColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Справочник_категорий_BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.кп2_DataSet = new kp2_2.кп2_DataSet();
+            this.Справочник_категорий_TableAdapter = new kp2_2.кп2_DataSetTableAdapters.Справочник_катерогийTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.Справочник_категорий_DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Справочник_категорий_BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.кп2_DataSet)).BeginInit();
@@ -47,6 +47,7 @@ namespace kp2_2
             this.Справочник_категорий_DataGridView.AllowUserToAddRows = false;
             this.Справочник_категорий_DataGridView.AllowUserToDeleteRows = false;
             this.Справочник_категорий_DataGridView.AutoGenerateColumns = false;
+            this.Справочник_категорий_DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.Справочник_категорий_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Справочник_категорий_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Код_категории_DataGridViewColumn,
@@ -55,11 +56,35 @@ namespace kp2_2
             this.Справочник_категорий_DataGridView.DataSource = this.Справочник_категорий_BindingSource;
             this.Справочник_категорий_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Справочник_категорий_DataGridView.Location = new System.Drawing.Point(0, 0);
+            this.Справочник_категорий_DataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Справочник_категорий_DataGridView.Name = "Справочник_категорий_DataGridView";
-            this.Справочник_категорий_DataGridView.Size = new System.Drawing.Size(494, 361);
+            this.Справочник_категорий_DataGridView.Size = new System.Drawing.Size(659, 472);
             this.Справочник_категорий_DataGridView.TabIndex = 0;
             this.Справочник_категорий_DataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Справочник_категорий_DataGridView_CellEndEdit);
             this.Справочник_категорий_DataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Справочник_категорий_DataGridView_DataError);
+            // 
+            // Код_категории_DataGridViewColumn
+            // 
+            this.Код_категории_DataGridViewColumn.DataPropertyName = "Код категории";
+            this.Код_категории_DataGridViewColumn.HeaderText = "Код категории";
+            this.Код_категории_DataGridViewColumn.Name = "Код_категории_DataGridViewColumn";
+            this.Код_категории_DataGridViewColumn.ReadOnly = true;
+            this.Код_категории_DataGridViewColumn.Width = 119;
+            // 
+            // Название_категории_DataGridViewColumn
+            // 
+            this.Название_категории_DataGridViewColumn.DataPropertyName = "Название категории";
+            this.Название_категории_DataGridViewColumn.HeaderText = "Название категории";
+            this.Название_категории_DataGridViewColumn.Name = "Название_категории_DataGridViewColumn";
+            this.Название_категории_DataGridViewColumn.ReadOnly = true;
+            this.Название_категории_DataGridViewColumn.Width = 154;
+            // 
+            // Описание_категории_DataGridViewColumn
+            // 
+            this.Описание_категории_DataGridViewColumn.DataPropertyName = "Описание категории";
+            this.Описание_категории_DataGridViewColumn.HeaderText = "Описание категории";
+            this.Описание_категории_DataGridViewColumn.Name = "Описание_категории_DataGridViewColumn";
+            this.Описание_категории_DataGridViewColumn.Width = 157;
             // 
             // Справочник_категорий_BindingSource
             // 
@@ -75,37 +100,15 @@ namespace kp2_2
             // 
             this.Справочник_категорий_TableAdapter.ClearBeforeFill = true;
             // 
-            // Код_категории_DataGridViewColumn
-            // 
-            this.Код_категории_DataGridViewColumn.DataPropertyName = "Код категории";
-            this.Код_категории_DataGridViewColumn.HeaderText = "Код категории";
-            this.Код_категории_DataGridViewColumn.Name = "Код_категории_DataGridViewColumn";
-            this.Код_категории_DataGridViewColumn.ReadOnly = true;
-            this.Код_категории_DataGridViewColumn.Width = 110;
-            // 
-            // Название_категории_DataGridViewColumn
-            // 
-            this.Название_категории_DataGridViewColumn.DataPropertyName = "Название категории";
-            this.Название_категории_DataGridViewColumn.HeaderText = "Название категории";
-            this.Название_категории_DataGridViewColumn.Name = "Название_категории_DataGridViewColumn";
-            this.Название_категории_DataGridViewColumn.ReadOnly = true;
-            this.Название_категории_DataGridViewColumn.Width = 140;
-            // 
-            // Описание_категории_DataGridViewColumn
-            // 
-            this.Описание_категории_DataGridViewColumn.DataPropertyName = "Описание категории";
-            this.Описание_категории_DataGridViewColumn.HeaderText = "Описание категории";
-            this.Описание_категории_DataGridViewColumn.Name = "Описание_категории_DataGridViewColumn";
-            this.Описание_категории_DataGridViewColumn.Width = 200;
-            // 
             // catalog_category_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 361);
+            this.ClientSize = new System.Drawing.Size(659, 472);
             this.Controls.Add(this.Справочник_категорий_DataGridView);
+            this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "catalog_category_form";
-            this.Text = "catalog_category_form";
             this.Load += new System.EventHandler(this.catalog_category_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Справочник_категорий_DataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Справочник_категорий_BindingSource)).EndInit();

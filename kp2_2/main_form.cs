@@ -266,6 +266,7 @@ namespace kp2_2
             }
             schedule_form novoeokno = new schedule_form((int)(Турниры_DataGridView.SelectedRows[0].Cells[0].Value));
             Row_ref = Турниры_DataGridView.SelectedRows[0];
+            novoeokno.Text = Row_ref.Cells[1].Value.ToString();
 
             if (novoeokno.ShowDialog(this) == DialogResult.OK)//новое окно schedule_form
             {
@@ -279,8 +280,62 @@ namespace kp2_2
                 MessageBox.Show("Выберите 1 турнир", "Ошибка");
                 return;
             }
-            draws_form novoeokno = new draws_form((int)(Турниры_DataGridView.SelectedRows[0].Cells[0].Value));
+
+            /*проверка заполнения*/
+            for (int i = 2; i < 19; i++)
+            {
+                if ((Турниры_DataGridView.SelectedRows[0].Cells[i].ValueType.Name != "String") &&
+                    (Турниры_DataGridView.SelectedRows[0].Cells[i].ReadOnly == false) &&
+                    (Турниры_DataGridView.SelectedRows[0].Cells[i].Value.Equals(DBNull.Value))) {
+                    MessageBox.Show("Заполните поле " + Турниры_DataGridView.Columns[i].HeaderText, "Ошибка");
+                    return;
+                }
+            }
+
+            System.Data.OleDb.OleDbCommand Command;
+            Command = new global::System.Data.OleDb.OleDbCommand();
+            System.Data.OleDb.OleDbConnection Connection;
+            Connection = new global::System.Data.OleDb.OleDbConnection();
+            Command.CommandText = "SELECT * FROM [Списки участников] WHERE [Код турнира] = " + (int)(Турниры_DataGridView.SelectedRows[0].Cells[0].Value);
+            Command.Connection = Connection;
+            Connection.ConnectionString = global::kp2_2.Properties.Settings.Default.kp2ConnectionString;
+            Connection.Open();
+            System.Data.OleDb.OleDbDataReader Reader = Command.ExecuteReader();
+            int number_of_participants = 0;
             Row_ref = Турниры_DataGridView.SelectedRows[0];
+            while (Reader.Read())
+            {
+                if(Reader[2].Equals(DBNull.Value))
+                {
+                    MessageBox.Show("Заполните список участников", "Ошибка");
+                    Reader.Close();
+                    Connection.Close();
+                    return;
+                }
+                if(Row_ref.Cells[5].Value.ToString().Contains("арный") && Reader[3].Equals(DBNull.Value))
+                {
+                    MessageBox.Show("Заполните список участников", "Ошибка");
+                    Reader.Close();
+                    Connection.Close();
+                    return;
+                }
+                number_of_participants++;
+            }
+            Reader.Close();
+            Connection.Close();
+            if (number_of_participants != (int)Row_ref.Cells[4].Value)
+            {
+                MessageBox.Show("Заполните список участников", "Ошибка");
+                Reader.Close();
+            }
+
+            int[] codes_courts = new int[(int)(Row_ref.Cells[9].Value)];
+            for (int i = 0; i < (int)(Row_ref.Cells[9].Value); i++) codes_courts[i] = (int)(Row_ref.Cells[10+i].Value);
+            draws_form novoeokno = new draws_form((int)(Row_ref.Cells[0].Value), number_of_participants,
+                (int)(Row_ref.Cells[9].Value), codes_courts, (DateTime)(Row_ref.Cells[7].Value), 
+                (DateTime)(Row_ref.Cells[8].Value), (int)(Row_ref.Cells[15].Value),
+                (DateTime)(Row_ref.Cells[13].Value), (DateTime)(Row_ref.Cells[14].Value));
+            novoeokno.Text = Row_ref.Cells[1].Value.ToString();
 
             if (novoeokno.ShowDialog(this) == DialogResult.OK)//новое окно draws_form
             {
@@ -301,6 +356,7 @@ namespace kp2_2
             }
             list_participants_form novoeokno = new list_participants_form((int)(Турниры_DataGridView.SelectedRows[0].Cells[0].Value));
             Row_ref = Турниры_DataGridView.SelectedRows[0];
+            novoeokno.Text = Row_ref.Cells[1].Value.ToString();
 
             if (novoeokno.ShowDialog(this) == DialogResult.OK)//новое окно list_participants_form
             {

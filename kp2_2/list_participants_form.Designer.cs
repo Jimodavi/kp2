@@ -51,6 +51,7 @@ namespace kp2_2
             // Списки_участников_DataGridView
             // 
             this.Списки_участников_DataGridView.AutoGenerateColumns = false;
+            this.Списки_участников_DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.Списки_участников_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Списки_участников_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Код_учаcтника_DataGridViewColumn,
@@ -60,8 +61,9 @@ namespace kp2_2
             this.Списки_участников_DataGridView.DataSource = this.Cписки_участников_BindingSource;
             this.Списки_участников_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Списки_участников_DataGridView.Location = new System.Drawing.Point(0, 0);
+            this.Списки_участников_DataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.Списки_участников_DataGridView.Name = "Списки_участников_DataGridView";
-            this.Списки_участников_DataGridView.Size = new System.Drawing.Size(553, 425);
+            this.Списки_участников_DataGridView.Size = new System.Drawing.Size(737, 556);
             this.Списки_участников_DataGridView.TabIndex = 0;
             this.Списки_участников_DataGridView.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.Списки_участников_DataGridView_CellBeginEdit);
             this.Списки_участников_DataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.Списки_участников_DataGridView_CellEndEdit);
@@ -75,7 +77,7 @@ namespace kp2_2
             this.Код_учаcтника_DataGridViewColumn.HeaderText = "Код учаcтника";
             this.Код_учаcтника_DataGridViewColumn.Name = "Код_учаcтника_DataGridViewColumn";
             this.Код_учаcтника_DataGridViewColumn.ReadOnly = true;
-            this.Код_учаcтника_DataGridViewColumn.Width = 110;
+            this.Код_учаcтника_DataGridViewColumn.Width = 121;
             // 
             // Код_турнира_DataGridViewColumn
             // 
@@ -95,7 +97,7 @@ namespace kp2_2
             this.Код_игрока1_DataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Код_игрока1_DataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Код_игрока1_DataGridViewColumn.ValueMember = "Код игрока";
-            this.Код_игрока1_DataGridViewColumn.Width = 200;
+            this.Код_игрока1_DataGridViewColumn.Width = 78;
             // 
             // Справочник_игроков_BindingSource1
             // 
@@ -117,7 +119,7 @@ namespace kp2_2
             this.Код_игрока2_DataGridViewColumn.Name = "Код_игрока2_DataGridViewColumn";
             this.Код_игрока2_DataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Код_игрока2_DataGridViewColumn.ValueMember = "Код игрока";
-            this.Код_игрока2_DataGridViewColumn.Width = 200;
+            this.Код_игрока2_DataGridViewColumn.Width = 78;
             // 
             // Справочник_игроков_BindingSource2
             // 
@@ -139,12 +141,13 @@ namespace kp2_2
             // 
             // list_participants_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 425);
+            this.ClientSize = new System.Drawing.Size(737, 556);
             this.Controls.Add(this.Списки_участников_DataGridView);
+            this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "list_participants_form";
-            this.Text = "list_participants_form";
             this.Load += new System.EventHandler(this.list_participants_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Списки_участников_DataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Справочник_игроков_BindingSource1)).EndInit();

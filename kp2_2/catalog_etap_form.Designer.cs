@@ -50,6 +50,7 @@ namespace kp2_2
             this.Справочник_этапов_турнира_DataGridView.AllowUserToAddRows = false;
             this.Справочник_этапов_турнира_DataGridView.AllowUserToDeleteRows = false;
             this.Справочник_этапов_турнира_DataGridView.AutoGenerateColumns = false;
+            this.Справочник_этапов_турнира_DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.Справочник_этапов_турнира_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Справочник_этапов_турнира_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Код_этапа_DataGridViewColumn,
@@ -58,9 +59,10 @@ namespace kp2_2
             this.Справочник_этапов_турнира_DataGridView.DataSource = this.Справочник_этапов_турнира_BindingSource;
             this.Справочник_этапов_турнира_DataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Справочник_этапов_турнира_DataGridView.Location = new System.Drawing.Point(0, 0);
+            this.Справочник_этапов_турнира_DataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Справочник_этапов_турнира_DataGridView.Name = "Справочник_этапов_турнира_DataGridView";
             this.Справочник_этапов_турнира_DataGridView.ReadOnly = true;
-            this.Справочник_этапов_турнира_DataGridView.Size = new System.Drawing.Size(414, 361);
+            this.Справочник_этапов_турнира_DataGridView.Size = new System.Drawing.Size(552, 472);
             this.Справочник_этапов_турнира_DataGridView.TabIndex = 0;
             // 
             // Код_этапа_DataGridViewColumn
@@ -69,7 +71,7 @@ namespace kp2_2
             this.Код_этапа_DataGridViewColumn.HeaderText = "Код этапа";
             this.Код_этапа_DataGridViewColumn.Name = "Код_этапа_DataGridViewColumn";
             this.Код_этапа_DataGridViewColumn.ReadOnly = true;
-            this.Код_этапа_DataGridViewColumn.Width = 90;
+            this.Код_этапа_DataGridViewColumn.Width = 94;
             // 
             // Этап_DataGridViewColumn
             // 
@@ -77,6 +79,7 @@ namespace kp2_2
             this.Этап_DataGridViewColumn.HeaderText = "Этап";
             this.Этап_DataGridViewColumn.Name = "Этап_DataGridViewColumn";
             this.Этап_DataGridViewColumn.ReadOnly = true;
+            this.Этап_DataGridViewColumn.Width = 67;
             // 
             // Код_системы_проведения_DataGridViewColumn
             // 
@@ -89,7 +92,7 @@ namespace kp2_2
             this.Код_системы_проведения_DataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Код_системы_проведения_DataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Код_системы_проведения_DataGridViewColumn.ValueMember = "Код системы";
-            this.Код_системы_проведения_DataGridViewColumn.Width = 180;
+            this.Код_системы_проведения_DataGridViewColumn.Width = 189;
             // 
             // Справочник_систем_проведения_BindingSource
             // 
@@ -116,12 +119,13 @@ namespace kp2_2
             // 
             // catalog_etap_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 361);
+            this.ClientSize = new System.Drawing.Size(552, 472);
             this.Controls.Add(this.Справочник_этапов_турнира_DataGridView);
+            this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "catalog_etap_form";
-            this.Text = "catalog_etap_form";
             this.Load += new System.EventHandler(this.catalog_etap_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Справочник_этапов_турнира_DataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Справочник_систем_проведения_BindingSource)).EndInit();

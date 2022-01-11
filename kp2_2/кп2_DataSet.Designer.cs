@@ -6064,14 +6064,12 @@ namespace kp2_2.кп2_DataSetTableAdapters
             this._adapter.UpdateCommand.Connection = this.Connection;
         }
 
-
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection()
         {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
             this._connection.ConnectionString = global::kp2_2.Properties.Settings.Default.kp2ConnectionString;
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection()
@@ -6082,7 +6080,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             this._commandCollection[0].CommandText = "SELECT [Код матча], [Код турнира], Корт, [Время начала] FROM Расписание WHERE [Код турнира] = ***** ORDER BY [Время начала]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
@@ -6098,7 +6095,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             int returnValue = this.Adapter.Fill(dataTable);
             return returnValue;
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
@@ -6451,7 +6447,6 @@ namespace kp2_2.кп2_DataSetTableAdapters
             return this.Adapter.Update(new global::System.Data.DataRow[] {
                         dataRow});
         }
-
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
