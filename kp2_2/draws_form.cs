@@ -43,13 +43,7 @@ namespace kp2_2
             Connection = new global::System.Data.OleDb.OleDbConnection();
             Connection.ConnectionString = global::kp2_2.Properties.Settings.Default.kp2ConnectionString;
             Connection.Open();
-            Command.Connection = Connection;
-            
-            /*удалить лишние записи*/
-            //Command.CommandText = "DELETE FROM [Сетки] WHERE [Код турнира] = " + code_tournament.ToString();
-            //Command.ExecuteNonQuery();
-            //Command.CommandText = "DELETE FROM [Расписание] WHERE [Код турнира] = " + code_tournament.ToString();
-            //Command.ExecuteNonQuery();
+            Command.Connection = Connection;            
             
             /*перенести коды участников в массив*/
             Command.CommandText = "SELECT * FROM [Списки участников] WHERE [Код турнира] = " + code_tournament.ToString() + " ORDER BY [Код учаcтника]";
@@ -250,8 +244,8 @@ namespace kp2_2
             }
             flag = 0;
             char[] inputarray;
-            for (i = 1; i < number_of_participants; i++)
-                for (int j = i + 1; j < number_of_participants; j++)
+            for (i = 1; i < Сетки_DataGridView.ColumnCount; i++)
+                for (int j = i + 1; j < Сетки_DataGridView.ColumnCount; j++)
                 {
                     inputarray = draws[flag, 0].ToCharArray();
                     Array.Reverse(inputarray);
@@ -271,7 +265,6 @@ namespace kp2_2
         }
         private void button_Click(object sender, EventArgs e)
         {
-            /*обновление сетки и расписания*/
             System.Data.OleDb.OleDbCommand Command;
             Command = new global::System.Data.OleDb.OleDbCommand();
             System.Data.OleDb.OleDbConnection Connection;
@@ -279,6 +272,12 @@ namespace kp2_2
             Command.Connection = Connection;
             Connection.ConnectionString = global::kp2_2.Properties.Settings.Default.kp2ConnectionString;
             Connection.Open();
+            /*удалить лишние записи*/
+            Command.CommandText = "DELETE FROM [Сетки] WHERE [Код турнира] = " + code_tournament.ToString();
+            Command.ExecuteNonQuery();
+            Command.CommandText = "DELETE FROM [Расписание] WHERE [Код турнира] = " + code_tournament.ToString();
+            Command.ExecuteNonQuery();
+            /*обновление сетки и расписания*/
             generate();
             Command.CommandText = "SELECT * FROM [Списки участников] WHERE [Код турнира] = " + code_tournament.ToString() + " ORDER BY [Код учаcтника]";
             System.Data.OleDb.OleDbDataReader Reader = Command.ExecuteReader();
@@ -290,6 +289,8 @@ namespace kp2_2
                 i++;
             }
             Reader.Close();
+            Connection.Close();
+            Connection.Open();
             Command.CommandText = "SELECT count (*) FROM [Сетки] WHERE [Код турнира] = " + code_tournament.ToString();
             int a = (int)Command.ExecuteScalar();
             Command.CommandText = "SELECT [Счёт первого сета], [Счёт второго сета], [Счёт третьего сета] FROM [Сетки] WHERE [Код турнира] = " + code_tournament.ToString() + " ORDER BY [Код матча]";
@@ -336,8 +337,8 @@ namespace kp2_2
             }
             a = 0;
             char[] inputarray;
-            for (i = 1; i < number_of_participants; i++)
-                for (int j = i + 1; j < number_of_participants; j++)
+            for (i = 1; i < Сетки_DataGridView.ColumnCount; i++)
+                for (int j = i + 1; j < Сетки_DataGridView.ColumnCount; j++)
                 {
                     inputarray = draws[a, 0].ToCharArray();
                     Array.Reverse(inputarray);

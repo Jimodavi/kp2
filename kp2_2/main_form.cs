@@ -331,16 +331,21 @@ namespace kp2_2
 
             int[] codes_courts = new int[(int)(Row_ref.Cells[9].Value)];
             for (int i = 0; i < (int)(Row_ref.Cells[9].Value); i++) codes_courts[i] = (int)(Row_ref.Cells[10+i].Value);
-            draws_form novoeokno = new draws_form((int)(Row_ref.Cells[0].Value), number_of_participants,
+            switch ((int)Row_ref.Cells[3].Value)
+            {
+                /*круговой турнир*/
+                case 2:draws_form novoeokno = new draws_form((int)(Row_ref.Cells[0].Value), number_of_participants,
                 (int)(Row_ref.Cells[9].Value), codes_courts, (DateTime)(Row_ref.Cells[7].Value), 
                 (DateTime)(Row_ref.Cells[8].Value), (int)(Row_ref.Cells[15].Value),
                 (DateTime)(Row_ref.Cells[13].Value), (DateTime)(Row_ref.Cells[14].Value));
-            novoeokno.Text = Row_ref.Cells[1].Value.ToString();
+                novoeokno.Text = Row_ref.Cells[1].Value.ToString();
 
-            if (novoeokno.ShowDialog(this) == DialogResult.OK)//новое окно draws_form
-            {
-            }
-            else { }
+                if (novoeokno.ShowDialog(this) == DialogResult.OK)//новое окно draws_form
+                {
+                }
+                else { }
+                break;
+            }            
         }
         private void List_participants_MenuItem_Click(object sender, EventArgs e)
         {
